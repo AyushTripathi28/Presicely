@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
 
-import 'package:flutter/material.dart';
-
 
 class Scorescreen extends StatelessWidget {
   @override
@@ -51,9 +49,6 @@ class Scorescreen extends StatelessWidget {
                   ),
                 ),
               ),
-              //decoration: BoxDecoration(
-              //shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12)),
-              //),
             ),
             Container(
               padding: EdgeInsets.all(20),
@@ -65,7 +60,7 @@ class Scorescreen extends StatelessWidget {
                     width: 150,
                     decoration: BoxDecoration(borderRadius: BorderRadius.circular(24)),
                     child: Image.asset(
-                      "assets/screen1.jpeg",
+                      "assets/screen1.jpg",
                       height: 150,
                       width: 150,
                     ),
@@ -76,10 +71,17 @@ class Scorescreen extends StatelessWidget {
                     width: 150,
                     decoration: BoxDecoration(borderRadius: BorderRadius.circular(24)),
                     child: Image.asset(
-                      "assets/screen2.jpeg",
+                      "assets/screen2.jpg",
                       height: 150,
                       width: 150,
+                      fit: BoxFit.cover,
                     ),
+                    //Container(
+                    //alignment: Alignment.bottomCenter,
+                    //children: [
+                    //Text('Your top Interests', style: TextStyle(fontSize: 15, color: Colors.grey)),
+                    //],
+                    //),
                   ),
                 ],
               ),
@@ -192,6 +194,15 @@ class Scorescreen extends StatelessWidget {
                             color: Colors.red,
                           ),
                           Text('Income Documents', style: TextStyle(fontSize: 15, fontWeight: FontWeight.bold, color: Colors.white)),
+                        ],
+                      ),
+                      Row(
+                        children: [
+                          Icon(
+                            Icons.close_outlined,
+                            color: Colors.red,
+                          ),
+                          Text('English Proficiency Test', style: TextStyle(fontSize: 15, fontWeight: FontWeight.bold, color: Colors.white)),
                         ],
                       ),
                     ],
