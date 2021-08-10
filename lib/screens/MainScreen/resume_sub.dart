@@ -6,7 +6,7 @@ import 'package:path/path.dart';
 import 'package:flutter/material.dart';
 import 'package:file_picker/file_picker.dart';
 import 'package:precisely/Storage_Services/services.dart';
-import 'package:precisely/assets/figmaIcon.dart';
+import 'package:precisely/assets/figmauploadicon_icons.dart';
 
 class ResumeSubCard extends StatefulWidget {
   @override
@@ -76,7 +76,7 @@ class _ResumeSubCardState extends State<ResumeSubCard> {
                   child: new IconButton(
                 padding: new EdgeInsets.fromLTRB(0, 50, 220, 150),
                 color: Colors.white,
-                icon: new Icon(FigmaIcon.uploadIcon, size: 180.0),
+                icon: new Icon(Figmauploadicon.arrow___down, size: 180.0),
                 onPressed: () async {
                   await selectFile();
                   uploadFile();

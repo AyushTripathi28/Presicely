@@ -75,9 +75,9 @@ flutter:
     - family: Circular Std
       fonts:
        - asset: fonts/Circular-Std-Bold.ttf
-    - family: Figmaicon
+    - family: Figmauploadicon
       fonts:
-       - asset: assets/icons/Figmaicon.ttf
+       - asset: assets/icons/Figmauploadicon.ttf
   #
   # For details regarding fonts from package dependencies,
   # see https://flutter.dev/custom-fonts/#from-packages
