@@ -60,7 +60,7 @@ class Scorescreen extends StatelessWidget {
                     width: 150,
                     decoration: BoxDecoration(borderRadius: BorderRadius.circular(24)),
                     child: Image.asset(
-                      "assets/screen1.jpg",
+                      "assets/screen1.jpeg",
                       height: 150,
                       width: 150,
                     ),
@@ -71,7 +71,7 @@ class Scorescreen extends StatelessWidget {
                     width: 150,
                     decoration: BoxDecoration(borderRadius: BorderRadius.circular(24)),
                     child: Image.asset(
-                      "assets/screen2.jpg",
+                      "assets/screen2.jpeg",
                       height: 150,
                       width: 150,
                       fit: BoxFit.cover,

@@ -78,6 +78,10 @@ flutter:
     - family: Figmauploadicon
       fonts:
        - asset: assets/icons/Figmauploadicon.ttf
+    - family: Monument Extended
+      fonts:
+        - asset: fonts/MonumentExtended-Regular.otf
+#        - asset: fonts/MonumentExtended-Ultrabold.otf
   #
   # For details regarding fonts from package dependencies,
   # see https://flutter.dev/custom-fonts/#from-packages
