@@ -121,18 +121,20 @@ class _AppBarBottomState extends State<AppBarBottom> {
               items: <BottomNavigationBarItem>[
                 new BottomNavigationBarItem(
                   icon: new Image.asset(
-                    'assets/Home.png',
+                    'assets/Home.png', height: 20, width: 30,
                   ),
                   activeIcon: new Image.asset('assets/home_gradient.png'),
                   label: '',
                 ),
                 new BottomNavigationBarItem(
-                    icon: new Image.asset('assets/main.png'),
+                    icon: new Image.asset('assets/main.png',height: 20, width: 30,
+                    ),
                     activeIcon:
                     new Image.asset('assets/dashboard_gradient.png'),
                     label: ''),
                 new BottomNavigationBarItem(
-                    icon: new Image.asset('assets/Iconcolor.png'),
+                    icon: new Image.asset('assets/Iconcolor.png',height: 20, width: 30,
+                    ),
                     activeIcon: new Image.asset('assets/user_gradient.png'),
                     label: ''),
               ]),

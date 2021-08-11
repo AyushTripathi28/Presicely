@@ -8,7 +8,7 @@ class SectionMainCard extends StatelessWidget {
     required this.customIcon,
   }) : super(key: key);
   final String title;
-  final Icon customIcon;
+  final Image customIcon;
 
   // final Widget customWidget;
 
@@ -36,8 +36,8 @@ class SectionMainCard extends StatelessWidget {
       child: Padding(
         padding: const EdgeInsets.all(8.0),
         child: Container(
-          height: 180,
-          width: 142,
+          height: 160,
+          width: 132,
           decoration: BoxDecoration(
             gradient: LinearGradient(
               begin: Alignment.topLeft,
@@ -63,34 +63,37 @@ class SectionMainCard extends StatelessWidget {
                 ),
                 borderRadius: BorderRadius.circular(20),
               ),
-              child: Column(
-                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                crossAxisAlignment: CrossAxisAlignment.center,
-                children: [
-                  customIcon,
-                  GradientText(
-                    title,
-                    textAlign: TextAlign.center,
-                    style: TextStyle(
-                      shadows: [
-                        Shadow(
-                          offset: Offset(1.0, 1.0),
-                          blurRadius: 3.0,
-                          color: Color(0xff1E2226),
-                        ),
+              child: Padding(
+                padding: const EdgeInsets.all(8.0),
+                child: Column(
+                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                  crossAxisAlignment: CrossAxisAlignment.center,
+                  children: [
+                    customIcon,
+                    GradientText(
+                      title,
+                      textAlign: TextAlign.center,
+                      style: TextStyle(
+                        shadows: [
+                          Shadow(
+                            offset: Offset(1.0, 1.0),
+                            blurRadius: 3.0,
+                            color: Color(0xff1E2226),
+                          ),
+                        ],
+                        fontSize: 14.0,
+                        fontWeight: FontWeight.bold,
+                        letterSpacing: 1.5,
+                      ),
+                      gradientType: GradientType.linear,
+                      radius: 2.5,
+                      colors: [
+                        Color(0xff8D98A8),
+                        Color(0xffFFFFFF).withOpacity(0.4),
                       ],
-                      fontSize: 14.0,
-                      fontWeight: FontWeight.bold,
-                      letterSpacing: 1.5,
                     ),
-                    gradientType: GradientType.linear,
-                    radius: 2.5,
-                    colors: [
-                      Color(0xff8D98A8),
-                      Color(0xffFFFFFF).withOpacity(0.4),
-                    ],
-                  ),
-                ],
+                  ],
+                ),
               ),
             ),
           ),
