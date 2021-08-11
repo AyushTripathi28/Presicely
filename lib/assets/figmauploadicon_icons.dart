@@ -29,4 +29,5 @@ class Figmauploadicon {
   static const IconData vector = IconData(0xe805, fontFamily: _kFontFam, fontPackage: _kFontPkg);
   static const IconData vector1 = IconData(0xe806, fontFamily: _kFontFam, fontPackage: _kFontPkg);
   static const IconData backButton = IconData(0xe807, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+  static const IconData globe = IconData(0xe808, fontFamily: _kFontFam, fontPackage: _kFontPkg);
 }
