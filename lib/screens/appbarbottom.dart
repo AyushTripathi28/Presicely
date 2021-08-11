@@ -3,6 +3,8 @@ import 'package:flutter/material.dart';
 import 'package:precisely/screens/homeScreen/HomeScreen.dart';
 import 'package:precisely/screens/profile.dart';
 
+import 'MainScreen/DashScreen.dart';
+
 class AppBarBottom extends StatefulWidget {
   const AppBarBottom({Key? key, required this.value}) : super(key: key);
   final int value;
@@ -15,7 +17,7 @@ class _AppBarBottomState extends State<AppBarBottom> {
   int _selectedIndex = 0;
   List<Widget> _widgetOptions = <Widget>[
     HomePage(),
-    //DashCards(),
+    DashCard(),
     Profile()
   ];
 
@@ -30,7 +32,7 @@ class _AppBarBottomState extends State<AppBarBottom> {
   Widget build(BuildContext context) {
     return Scaffold(
       resizeToAvoidBottomInset: false,
-      //backgroundColor: Color(0xff1E1E1E),
+      backgroundColor: Color(0xff1E1E1E),
       appBar: AppBar(
         elevation: 0,
         backgroundColor: Color(0xff1E1E1E),
@@ -44,7 +46,7 @@ class _AppBarBottomState extends State<AppBarBottom> {
             ),
             child: new IconButton(
                 onPressed: () => print('Clicked..'),
-                icon: new Image.asset('assets/bariconinfo.png')),
+                icon: new Image.asset('assets/info.png')),
           ),
           Container(
             margin: EdgeInsets.all(10),
@@ -55,7 +57,7 @@ class _AppBarBottomState extends State<AppBarBottom> {
                 border: Border.all(color: Colors.blueGrey)),
             child: new IconButton(
               onPressed: () => print('Clicked..'),
-              icon: new Image.asset('assets/baricon.png'),
+              icon: new Image.asset('assets/Vector.png'),
             ),
           ),
         ],
@@ -119,18 +121,18 @@ class _AppBarBottomState extends State<AppBarBottom> {
               items: <BottomNavigationBarItem>[
                 new BottomNavigationBarItem(
                   icon: new Image.asset(
-                    'assets/home.png',
+                    'assets/Home.png',
                   ),
                   activeIcon: new Image.asset('assets/home_gradient.png'),
                   label: '',
                 ),
                 new BottomNavigationBarItem(
-                    icon: new Image.asset('assets/dashboard.png'),
+                    icon: new Image.asset('assets/main.png'),
                     activeIcon:
                     new Image.asset('assets/dashboard_gradient.png'),
                     label: ''),
                 new BottomNavigationBarItem(
-                    icon: new Image.asset('assets/user.png'),
+                    icon: new Image.asset('assets/Iconcolor.png'),
                     activeIcon: new Image.asset('assets/user_gradient.png'),
                     label: ''),
               ]),
