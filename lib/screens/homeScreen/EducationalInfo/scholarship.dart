@@ -195,7 +195,7 @@ class _ScholarshipState extends State<Scholarship> {
                                   Navigator.of(context).push(
                                     MaterialPageRoute(
                                       builder: (context) => HomeScreen(
-                                        value: widget.value + 10,
+                                        //value: widget.value + 10,
                                       ),
                                     ),
                                   );

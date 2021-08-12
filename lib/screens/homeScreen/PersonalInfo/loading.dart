@@ -53,11 +53,13 @@ class _LoadingPersonalState extends State<LoadingPersonal> {
                       children: [
                         Text(
                           "83%",
-                          style: TextStyle(fontSize: 35, fontWeight: FontWeight.bold, color: Colors.red),
+                          style: TextStyle(fontSize: 35, fontWeight: FontWeight.bold, color: Colors.red, fontFamily: 'agne'),
                         ),
+                        SizedBox(height: 8,),
                         Text(
                           "percent of Americans agree\nthat our nation is better off\nwhen more of our students are\ninternationally educated and\nunderstand other cultures and\nlanguages.",
-                          style: TextStyle(fontSize: 14, fontWeight: FontWeight.bold, color: Colors.green),
+                          style: TextStyle(fontSize: 14, fontWeight: FontWeight.bold, color: Colors.green, fontFamily: 'futur',),
+                          textAlign: TextAlign.right,
                         ),
                       ],
                     ),
@@ -70,6 +72,9 @@ class _LoadingPersonalState extends State<LoadingPersonal> {
                   radius: Radius.circular(8),
                   child: Text('Next', style: TextStyle(color: Color(0xffFFFFFF), fontSize: 15),),
                   backgroundColor: Colors.black45,
+                  elevation: 4,
+                  inkWell: true,
+                  onTap: () => print('Tap'),
                   gradient: LinearGradient(
                     colors: [
                       Color(0xffFFE2CD),

@@ -1,335 +1,603 @@
+import 'package:outline_gradient_button/outline_gradient_button.dart';
+import 'package:precisely/assets/figmauploadicon_icons.dart';
+import 'package:simple_gradient_text/simple_gradient_text.dart';
 import 'package:flutter/material.dart';
-import 'package:precisely/utils/progress_bar.dart';
 
-
-import 'personal_info_2.dart';
-
-class PersonalDetails1 extends StatefulWidget {
-  const PersonalDetails1({Key? key, required this.value}) : super(key: key);
-  final int value;
+class PersonalInfoPage extends StatefulWidget {
+  const PersonalInfoPage({Key? key}) : super(key: key);
 
   @override
-  _PersonalDetails1State createState() => _PersonalDetails1State();
+  _PersonalInfoPageState createState() => _PersonalInfoPageState();
 }
 
-class _PersonalDetails1State extends State<PersonalDetails1> {
+class _PersonalInfoPageState extends State<PersonalInfoPage> {
   @override
   Widget build(BuildContext context) {
-    // var screenSize = MediaQuery.of(context).size;
-    // int value = 0;
-    // void complete() {
-    //   setState(() {
-    //     value = 10;
-    //   });
-    // }
-
     return Scaffold(
+      backgroundColor: Color(0xff1E1E1E),
       appBar: AppBar(
-        title: Text("Personal Info"),
         leading: IconButton(
           onPressed: () {
             Navigator.of(context).pop();
           },
-          icon: Icon(Icons.arrow_back),
+          icon: Icon(
+            Figmauploadicon.backButton,
+            size: 15,
+          ),
         ),
         elevation: 0,
-        backgroundColor: Colors.transparent,
-        centerTitle: false,
-        actions: [
-          IconButton(
-            onPressed: () {},
-            icon: Icon(Icons.info),
+        backgroundColor: Color(0xff1E1E1E),
+        actions: <Widget>[
+          Container(
+            height: 35,
+            width: 35,
+            decoration: BoxDecoration(
+              shape: BoxShape.circle,
+              border: Border.all(color: Colors.blueGrey),
+            ),
+            child: new IconButton(
+                onPressed: () => print('Clicked..'),
+                icon: new Image.asset('assets/info_icon.png')),
           ),
-          IconButton(
-            onPressed: () {},
-            icon: Icon(Icons.chat),
+          Container(
+            margin: EdgeInsets.all(10),
+            height: 35,
+            width: 35,
+            decoration: BoxDecoration(
+                shape: BoxShape.circle,
+                border: Border.all(color: Colors.blueGrey)),
+            child: new IconButton(
+              onPressed: () => print('Clicked..'),
+              icon: new Image.asset('assets/chat.png'),
+            ),
           ),
         ],
-        bottom: PreferredSize(
-          preferredSize: const Size.fromHeight(48.0),
-          child: Padding(
-            padding: const EdgeInsets.symmetric(horizontal: 20),
-            child: Container(
-              height: 50.0,
-              alignment: Alignment.center,
-              child: ProgressBar(
-                value: widget.value,
+        title: GradientText(
+          'Precisely',
+          style: TextStyle(
+            letterSpacing: 0.02,
+            fontStyle: FontStyle.normal,
+            fontWeight: FontWeight.bold,
+            fontSize: 22,
+          ),
+          colors: [
+            Color(0xffFFE2CD),
+            Color(0xfffec2e7),
+            Color(0XffC9E7FF),
+            Color(0xff86FEF4),
+          ],
+        ),
+      ),
+
+      //backgroundColor: Colors.black,
+      body: Padding(
+        padding: const EdgeInsets.all(20.0),
+        child: Center(
+          child: Container(
+            decoration: BoxDecoration(
+              gradient: LinearGradient(
+                begin: Alignment.topLeft,
+                end: Alignment.bottomRight,
+                colors: [
+                  Color(0xff32383E),
+                  Color(0xff17191C),
+                ],
+              ),
+              borderRadius: BorderRadius.circular(20),
+              boxShadow: [
+                BoxShadow(
+                  color: Color(0xff000000),
+                  blurRadius: 10.0, // soften the shadow
+                  spreadRadius: 0.0, //extend the shadow
+                )
+              ],
+            ),
+            child: Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: Container(
+                height: 800,
+                width: 400,
+                decoration: BoxDecoration(
+                  gradient: LinearGradient(
+                    begin: Alignment.topLeft,
+                    end: Alignment.bottomRight,
+                    colors: [
+                      Color(0xffC8D5E1).withOpacity(0.09),
+                      Color(0xff000000).withOpacity(0.2),
+                    ],
+                  ),
+                  borderRadius: BorderRadius.circular(20),
+                ),
+                child: Padding(
+                  padding: EdgeInsets.all(1.5), // white outline width
+                  child: DecoratedBox(
+                    decoration: BoxDecoration(
+                      gradient: LinearGradient(
+                        begin: Alignment.topLeft,
+                        end: Alignment.bottomRight,
+                        colors: [
+                          Color(0xff32383E),
+                          Color(0xff17191C),
+                        ],
+                      ),
+                      borderRadius: BorderRadius.circular(20),
+                    ),
+                    child: Stack(
+                      children: [
+                        SingleChildScrollView(
+                          child: Padding(
+                            padding: const EdgeInsets.all(20.0),
+                            child: Column(
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: [
+                                GradientText(
+                                  "Important",
+                                  style: TextStyle(
+                                      shadows: [
+                                        Shadow(
+                                          offset: Offset(1.0, 1.0),
+                                          blurRadius: 3.0,
+                                          color: Color(0xff1E2226),
+                                        ),
+                                      ],
+                                      fontSize: 18.0,
+                                      fontWeight: FontWeight.bold,
+                                      letterSpacing: 1.5),
+                                  gradientType: GradientType.linear,
+                                  radius: 2.5,
+                                  colors: [
+                                    Color(0xff8D98A8),
+                                    Color(0xffFFFFFF).withOpacity(0.4),
+                                  ],
+                                ),
+                                SizedBox(
+                                  height: 20,
+                                ),
+                                Container(
+                                  width: 320,
+                                  height: 90,
+                                  decoration: BoxDecoration(
+                                    color: Colors.black,
+                                    borderRadius: BorderRadius.circular(20),
+                                  ),
+                                  child: Padding(
+                                    padding: const EdgeInsets.all(13.0),
+                                    child: Column(
+                                      crossAxisAlignment:
+                                      CrossAxisAlignment.start,
+                                      children: [
+                                        Text(
+                                          "Name",
+                                          style: TextStyle(
+                                              color: Colors.white,
+                                              fontWeight: FontWeight.bold),
+                                        ),
+                                        TextField(
+                                          style: TextStyle(color: Colors.white),
+                                          // The validator receives the text that the user has entered.
+                                          decoration: InputDecoration(
+                                            contentPadding:
+                                            EdgeInsets.symmetric(
+                                                vertical: 0, horizontal: 0),
+                                            fillColor: Colors.black,
+                                            filled: true,
+                                            hintText: "First Name",
+                                            hintStyle: TextStyle(
+                                                color: Colors.grey,
+                                                fontSize: 16),
+                                            floatingLabelBehavior:
+                                            FloatingLabelBehavior.always,
+                                            border: OutlineInputBorder(
+                                              borderRadius:
+                                              BorderRadius.circular(10),
+                                              borderSide: BorderSide(
+                                                color: Colors.red,
+                                              ),
+                                            ),
+                                            focusedBorder: OutlineInputBorder(
+                                              borderRadius:
+                                              BorderRadius.circular(10),
+                                              borderSide: BorderSide(
+                                                color: Colors.transparent,
+                                              ),
+                                            ),
+                                          ),
+                                        ),
+                                      ],
+                                    ),
+                                  ),
+                                ),
+                                SizedBox(
+                                  height: 20,
+                                ),
+                                Container(
+                                  width: 320,
+                                  height: 90,
+                                  decoration: BoxDecoration(
+                                    color: Colors.black,
+                                    borderRadius: BorderRadius.circular(20),
+                                  ),
+                                  child: Padding(
+                                    padding: const EdgeInsets.all(13.0),
+                                    child: Column(
+                                      crossAxisAlignment:
+                                      CrossAxisAlignment.start,
+                                      children: [
+                                        Text(
+                                          "DOB",
+                                          style: TextStyle(
+                                              color: Colors.white,
+                                              fontWeight: FontWeight.bold),
+                                        ),
+                                        TextField(
+                                          style: TextStyle(color: Colors.white),
+                                          // The validator receives the text that the user has entered.
+                                          decoration: InputDecoration(
+                                            contentPadding:
+                                            EdgeInsets.symmetric(
+                                                vertical: 0, horizontal: 0),
+                                            fillColor: Colors.black,
+                                            filled: true,
+                                            hintText: "Date Month Year",
+                                            hintStyle: TextStyle(
+                                                color: Colors.grey,
+                                                fontSize: 16),
+                                            floatingLabelBehavior:
+                                            FloatingLabelBehavior.always,
+                                            border: OutlineInputBorder(
+                                              borderRadius:
+                                              BorderRadius.circular(10),
+                                              borderSide: BorderSide(
+                                                color: Colors.red,
+                                              ),
+                                            ),
+                                            focusedBorder: OutlineInputBorder(
+                                              borderRadius:
+                                              BorderRadius.circular(10),
+                                              borderSide: BorderSide(
+                                                color: Colors.transparent,
+                                              ),
+                                            ),
+                                          ),
+                                        ),
+                                      ],
+                                    ),
+                                  ),
+                                ),
+                                SizedBox(
+                                  height: 20,
+                                ),
+                                Container(
+                                  width: 320,
+                                  height: 90,
+                                  decoration: BoxDecoration(
+                                    color: Colors.black,
+                                    borderRadius: BorderRadius.circular(20),
+                                  ),
+                                  child: Padding(
+                                    padding: const EdgeInsets.all(13.0),
+                                    child: Column(
+                                      crossAxisAlignment:
+                                      CrossAxisAlignment.start,
+                                      children: [
+                                        Text(
+                                          "Citizenship",
+                                          style: TextStyle(
+                                              color: Colors.white,
+                                              fontWeight: FontWeight.bold),
+                                        ),
+                                        TextField(
+                                          style: TextStyle(color: Colors.white),
+                                          // The validator receives the text that the user has entered.
+                                          decoration: InputDecoration(
+                                            contentPadding:
+                                            EdgeInsets.symmetric(
+                                                vertical: 0, horizontal: 0),
+                                            fillColor: Colors.black,
+                                            filled: true,
+                                            hintText: "select option",
+                                            hintStyle: TextStyle(
+                                                color: Colors.grey,
+                                                fontSize: 16),
+                                            floatingLabelBehavior:
+                                            FloatingLabelBehavior.always,
+                                            border: OutlineInputBorder(
+                                              borderRadius:
+                                              BorderRadius.circular(10),
+                                              borderSide: BorderSide(
+                                                color: Colors.red,
+                                              ),
+                                            ),
+                                            focusedBorder: OutlineInputBorder(
+                                              borderRadius:
+                                              BorderRadius.circular(10),
+                                              borderSide: BorderSide(
+                                                color: Colors.transparent,
+                                              ),
+                                            ),
+                                          ),
+                                        ),
+                                      ],
+                                    ),
+                                  ),
+                                ),
+                                SizedBox(
+                                  height: 20,
+                                ),
+                                Container(
+                                  width: 320,
+                                  height: 90,
+                                  decoration: BoxDecoration(
+                                    color: Colors.black,
+                                    borderRadius: BorderRadius.circular(20),
+                                  ),
+                                  child: Padding(
+                                    padding: const EdgeInsets.all(13.0),
+                                    child: Column(
+                                      crossAxisAlignment:
+                                      CrossAxisAlignment.start,
+                                      children: [
+                                        Text(
+                                          "Sex",
+                                          style: TextStyle(
+                                              color: Colors.white,
+                                              fontWeight: FontWeight.bold),
+                                        ),
+                                        TextField(
+                                          style: TextStyle(color: Colors.white),
+                                          // The validator receives the text that the user has entered.
+                                          decoration: InputDecoration(
+                                            contentPadding:
+                                            EdgeInsets.symmetric(
+                                                vertical: 0, horizontal: 0),
+                                            fillColor: Colors.black,
+                                            filled: true,
+                                            hintText: "Select Option",
+                                            hintStyle: TextStyle(
+                                                color: Colors.grey,
+                                                fontSize: 16),
+                                            floatingLabelBehavior:
+                                            FloatingLabelBehavior.always,
+                                            border: OutlineInputBorder(
+                                              borderRadius:
+                                              BorderRadius.circular(10),
+                                              borderSide: BorderSide(
+                                                color: Colors.red,
+                                              ),
+                                            ),
+                                            focusedBorder: OutlineInputBorder(
+                                              borderRadius:
+                                              BorderRadius.circular(10),
+                                              borderSide: BorderSide(
+                                                color: Colors.transparent,
+                                              ),
+                                            ),
+                                          ),
+                                        ),
+                                      ],
+                                    ),
+                                  ),
+                                ),
+                                SizedBox(
+                                  height: 20,
+                                ),
+                                Container(
+                                  width: 320,
+                                  height: 90,
+                                  decoration: BoxDecoration(
+                                    color: Colors.black,
+                                    borderRadius: BorderRadius.circular(20),
+                                  ),
+                                  child: Padding(
+                                    padding: const EdgeInsets.all(13.0),
+                                    child: Column(
+                                      crossAxisAlignment:
+                                      CrossAxisAlignment.start,
+                                      children: [
+                                        Text(
+                                          "Marital Status",
+                                          style: TextStyle(
+                                              color: Colors.white,
+                                              fontWeight: FontWeight.bold),
+                                        ),
+                                        TextField(
+                                          style: TextStyle(color: Colors.white),
+                                          // The validator receives the text that the user has entered.
+                                          decoration: InputDecoration(
+                                            contentPadding:
+                                            EdgeInsets.symmetric(
+                                                vertical: 0, horizontal: 0),
+                                            fillColor: Colors.black,
+                                            filled: true,
+                                            hintText: "Select Options",
+                                            hintStyle: TextStyle(
+                                                color: Colors.grey,
+                                                fontSize: 16),
+                                            floatingLabelBehavior:
+                                            FloatingLabelBehavior.always,
+                                            border: OutlineInputBorder(
+                                              borderRadius:
+                                              BorderRadius.circular(10),
+                                              borderSide: BorderSide(
+                                                color: Colors.red,
+                                              ),
+                                            ),
+                                            focusedBorder: OutlineInputBorder(
+                                              borderRadius:
+                                              BorderRadius.circular(10),
+                                              borderSide: BorderSide(
+                                                color: Colors.transparent,
+                                              ),
+                                            ),
+                                          ),
+                                        ),
+                                      ],
+                                    ),
+                                  ),
+                                ),
+                                SizedBox(
+                                  height: 20,
+                                ),
+                                Container(
+                                  width: 320,
+                                  height: 90,
+                                  decoration: BoxDecoration(
+                                    color: Colors.black,
+                                    borderRadius: BorderRadius.circular(20),
+                                  ),
+                                  child: Padding(
+                                    padding: const EdgeInsets.all(13.0),
+                                    child: Column(
+                                      crossAxisAlignment:
+                                      CrossAxisAlignment.start,
+                                      children: [
+                                        Text(
+                                          "Marital Status",
+                                          style: TextStyle(
+                                              color: Colors.white,
+                                              fontWeight: FontWeight.bold),
+                                        ),
+                                        TextField(
+                                          style: TextStyle(color: Colors.white),
+                                          // The validator receives the text that the user has entered.
+                                          decoration: InputDecoration(
+                                            contentPadding:
+                                            EdgeInsets.symmetric(
+                                                vertical: 0, horizontal: 0),
+                                            fillColor: Colors.black,
+                                            filled: true,
+                                            hintText: "Select Options",
+                                            hintStyle: TextStyle(
+                                                color: Colors.grey,
+                                                fontSize: 16),
+                                            floatingLabelBehavior:
+                                            FloatingLabelBehavior.always,
+                                            border: OutlineInputBorder(
+                                              borderRadius:
+                                              BorderRadius.circular(10),
+                                              borderSide: BorderSide(
+                                                color: Colors.red,
+                                              ),
+                                            ),
+                                            focusedBorder: OutlineInputBorder(
+                                              borderRadius:
+                                              BorderRadius.circular(10),
+                                              borderSide: BorderSide(
+                                                color: Colors.transparent,
+                                              ),
+                                            ),
+                                          ),
+                                        ),
+                                      ],
+                                    ),
+                                  ),
+                                ),
+                                SizedBox(
+                                  height: 20,
+                                ),
+                                Container(
+                                  width: 320,
+                                  height: 90,
+                                  decoration: BoxDecoration(
+                                    color: Colors.black,
+                                    borderRadius: BorderRadius.circular(20),
+                                  ),
+                                  child: Padding(
+                                    padding: const EdgeInsets.all(13.0),
+                                    child: Column(
+                                      crossAxisAlignment:
+                                      CrossAxisAlignment.start,
+                                      children: [
+                                        Text(
+                                          "Marital Status",
+                                          style: TextStyle(
+                                              color: Colors.white,
+                                              fontWeight: FontWeight.bold),
+                                        ),
+                                        TextField(
+                                          style: TextStyle(color: Colors.white),
+                                          // The validator receives the text that the user has entered.
+                                          decoration: InputDecoration(
+                                            contentPadding:
+                                            EdgeInsets.symmetric(
+                                                vertical: 0, horizontal: 0),
+                                            fillColor: Colors.black,
+                                            filled: true,
+                                            hintText: "Select Options",
+                                            hintStyle: TextStyle(
+                                                color: Colors.grey,
+                                                fontSize: 16),
+                                            floatingLabelBehavior:
+                                            FloatingLabelBehavior.always,
+                                            border: OutlineInputBorder(
+                                              borderRadius:
+                                              BorderRadius.circular(10),
+                                              borderSide: BorderSide(
+                                                color: Colors.red,
+                                              ),
+                                            ),
+                                            focusedBorder: OutlineInputBorder(
+                                              borderRadius:
+                                              BorderRadius.circular(10),
+                                              borderSide: BorderSide(
+                                                color: Colors.transparent,
+                                              ),
+                                            ),
+                                          ),
+                                        ),
+                                      ],
+                                    ),
+                                  ),
+                                ),
+                              ],
+                            ),
+                          ),
+                        ),
+                        Positioned(
+                          bottom: 0,
+                          child: Container(
+                            decoration: BoxDecoration(
+                              borderRadius: BorderRadius.circular(20),
+                              gradient: LinearGradient(
+                                begin: Alignment.topCenter,
+                                end: Alignment.bottomCenter,
+                                colors: [
+                                  Color(0xff1E2125).withOpacity(0.15),
+                                  Color(0xff212528),
+                                ],
+                              ),
+                            ),
+                            width: 400,
+                            height: 150,
+                          ),
+                        )
+                      ],
+                    ),
+                  ),
+                ),
               ),
             ),
           ),
         ),
       ),
-      backgroundColor: Color(0xFF1E1E1E),
-      body: SingleChildScrollView(
-        child: Container(
-          child: Column(
-            crossAxisAlignment: CrossAxisAlignment.center,
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-              Padding(
-                padding: const EdgeInsets.all(26.0),
-                child: Container(
-                  decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(25),
-                    color: Color(0xFF32383E),
-                  ),
-                  child: Padding(
-                    padding: const EdgeInsets.all(8.0),
-                    child: Card(
-                      color: Colors.transparent,
-                      shape: RoundedRectangleBorder(
-                          borderRadius: BorderRadius.circular(20),
-                          side: BorderSide(color: Colors.black, width: 2)),
-                      child: Padding(
-                        padding: const EdgeInsets.all(20.0),
-                        child: Form(
-                          child: Column(
-                            mainAxisAlignment: MainAxisAlignment.start,
-                            crossAxisAlignment: CrossAxisAlignment.start,
-                            children: [
-                              Text("Important",
-                                  style: TextStyle(
-                                      fontSize: 20, color: Colors.grey)),
-                              SizedBox(
-                                height: 20,
-                              ),
-                              Text(
-                                "First Name",
-                                style: TextStyle(
-                                  fontSize: 30,
-                                  color: Colors.white,
-                                  fontWeight: FontWeight.bold,
-                                ),
-                              ),
-                              SizedBox(
-                                height: 10,
-                              ),
-                              SizedBox(
-                                height: 50,
-                                child: TextFormField(
-                                  // The validator receives the text that the user has entered.
-                                  decoration: InputDecoration(
-                                    contentPadding: EdgeInsets.symmetric(
-                                        vertical: 5, horizontal: 15),
-                                    fillColor: Colors.black,
-                                    filled: true,
-                                    hintText: "First Name",
-                                    hintStyle: TextStyle(
-                                      color: Colors.grey,
-                                    ),
-                                    floatingLabelBehavior:
-                                        FloatingLabelBehavior.always,
-                                    border: OutlineInputBorder(
-                                      borderRadius: BorderRadius.circular(20),
-                                      borderSide: BorderSide(
-                                        color: Colors.red,
-                                      ),
-                                    ),
-                                    focusedBorder: OutlineInputBorder(
-                                      borderRadius: BorderRadius.circular(20),
-                                      borderSide: BorderSide(
-                                        color: Colors.white,
-                                      ),
-                                    ),
-                                  ),
-                                  validator: (value) {
-                                    if (value == null || value.isEmpty) {
-                                      return 'Please enter some text';
-                                    }
-                                    return null;
-                                  },
-                                ),
-                              ),
-                              SizedBox(
-                                height: 20,
-                              ),
-                              Text(
-                                "Last Name",
-                                style: TextStyle(
-                                  fontSize: 30,
-                                  color: Colors.white,
-                                  fontWeight: FontWeight.bold,
-                                ),
-                              ),
-                              SizedBox(
-                                height: 10,
-                              ),
-                              SizedBox(
-                                height: 50,
-                                child: TextFormField(
-                                  // The validator receives the text that the user has entered.
-                                  decoration: InputDecoration(
-                                    contentPadding: EdgeInsets.symmetric(
-                                        vertical: 5, horizontal: 15),
-                                    fillColor: Colors.black,
-                                    filled: true,
-                                    hintText: "Last Name",
-                                    hintStyle: TextStyle(color: Colors.grey),
-                                    floatingLabelBehavior:
-                                        FloatingLabelBehavior.always,
-                                    border: OutlineInputBorder(
-                                      borderRadius: BorderRadius.circular(20),
-                                      borderSide: BorderSide(
-                                        color: Colors.red,
-                                      ),
-                                    ),
-                                    focusedBorder: OutlineInputBorder(
-                                      borderRadius: BorderRadius.circular(20),
-                                      borderSide: BorderSide(
-                                        color: Colors.white,
-                                      ),
-                                    ),
-                                  ),
-                                  validator: (value) {
-                                    if (value == null || value.isEmpty) {
-                                      return 'Please enter some text';
-                                    }
-                                    return null;
-                                  },
-                                ),
-                              ),
-                              SizedBox(
-                                height: 20,
-                              ),
-                              Text(
-                                "Email",
-                                style: TextStyle(
-                                  fontSize: 30,
-                                  color: Colors.white,
-                                  fontWeight: FontWeight.bold,
-                                ),
-                              ),
-                              SizedBox(
-                                height: 5,
-                              ),
-                              SizedBox(
-                                height: 50,
-                                child: TextFormField(
-                                  // The validator receives the text that the user has entered.
-                                  decoration: InputDecoration(
-                                    contentPadding: EdgeInsets.symmetric(
-                                        vertical: 5, horizontal: 15),
-                                    fillColor: Colors.black,
-                                    filled: true,
-                                    hintText: "Email",
-                                    hintStyle: TextStyle(color: Colors.grey),
-                                    floatingLabelBehavior:
-                                        FloatingLabelBehavior.always,
-                                    border: OutlineInputBorder(
-                                      borderRadius: BorderRadius.circular(20),
-                                      borderSide: BorderSide(
-                                        color: Colors.red,
-                                      ),
-                                    ),
-                                    focusedBorder: OutlineInputBorder(
-                                      borderRadius: BorderRadius.circular(20),
-                                      borderSide: BorderSide(
-                                        color: Colors.white,
-                                      ),
-                                    ),
-                                  ),
-                                  validator: (value) {
-                                    if (value == null || value.isEmpty) {
-                                      return 'Please enter some text';
-                                    }
-                                    return null;
-                                  },
-                                ),
-                              ),
-                              SizedBox(
-                                height: 20,
-                              ),
-                              Text(
-                                "Phone No.",
-                                style: TextStyle(
-                                  fontSize: 30,
-                                  color: Colors.white,
-                                  fontWeight: FontWeight.bold,
-                                ),
-                              ),
-                              SizedBox(
-                                height: 5,
-                              ),
-                              SizedBox(
-                                height: 50,
-                                child: TextFormField(
-                                  // The validator receives the text that the user has entered.
-                                  decoration: InputDecoration(
-                                    contentPadding: EdgeInsets.symmetric(
-                                        vertical: 5, horizontal: 15),
-                                    fillColor: Colors.black,
-                                    filled: true,
-                                    hintText: "Phone No.",
-                                    hintStyle: TextStyle(color: Colors.grey),
-                                    floatingLabelBehavior:
-                                        FloatingLabelBehavior.always,
-                                    border: OutlineInputBorder(
-                                      borderRadius: BorderRadius.circular(20),
-                                      borderSide: BorderSide(
-                                        color: Colors.red,
-                                      ),
-                                    ),
-                                    focusedBorder: OutlineInputBorder(
-                                      borderRadius: BorderRadius.circular(20),
-                                      borderSide: BorderSide(
-                                        color: Colors.white,
-                                      ),
-                                    ),
-                                  ),
-                                  validator: (value) {
-                                    if (value == null || value.isEmpty) {
-                                      return 'Please enter some text';
-                                    }
-                                    return null;
-                                  },
-                                ),
-                              ),
-                              SizedBox(
-                                height: 50,
-                              ),
-                              Align(
-                                alignment: Alignment.centerRight,
-                                child: ElevatedButton(
-                                  onPressed: () {
-                                    // complete();
-                                    Navigator.of(context).push(
-                                        MaterialPageRoute(
-                                            builder: (context) =>
-                                                PersonalDetails2(
-                                                  value: 10,
-                                                )));
-                                  },
-                                  style: ElevatedButton.styleFrom(
-                                      primary: Colors
-                                          .black, //background color of button
-                                      side: BorderSide(
-                                        width: 3,
-                                        color: Colors.yellowAccent,
-                                      ), //border width and color
-                                      elevation: 3, //elevation of button
-                                      shape: RoundedRectangleBorder(
-                                          borderRadius:
-                                              BorderRadius.circular(10)),
-                                      padding: EdgeInsets.symmetric(
-                                          vertical: 15, horizontal: 30)),
-                                  child: Text(
-                                    'Next',
-                                    style: TextStyle(
-                                      color: Colors.white,
-                                    ),
-                                  ),
-                                ),
-                              ),
-                            ],
-                          ),
-                        ),
-                      ),
-                    ),
-                  ),
-                ),
-              )
-            ],
-          ),
+      floatingActionButton: Padding(
+        padding: const EdgeInsets.only(right: 30,bottom: 30),
+        child: OutlineGradientButton(
+          child: Text('Finish',
+              style: TextStyle(
+                  color: Color(0xffFFFFFF),
+                  fontSize: 15,
+                  fontWeight: FontWeight.w400)),
+          onTap: () {},
+          gradient: LinearGradient(colors: [
+            Color(0xffFFE2CD),
+            Color(0xffFEC2E7),
+            Color(0xffC9E7FF),
+            Color(0xff86FEF4)
+          ]),
+          strokeWidth: 2,
+          padding: EdgeInsets.symmetric(horizontal: 30, vertical: 12),
+          radius: Radius.circular(8),
         ),
       ),
     );
