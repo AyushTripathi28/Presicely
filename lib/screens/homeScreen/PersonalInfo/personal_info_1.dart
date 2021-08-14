@@ -78,7 +78,7 @@ class _PersonalInfoPageState extends State<PersonalInfoPage> {
               boxShadow: [
                 BoxShadow(
                   color: Color(0xff000000),
-                  blurRadius: 10.0, // soften the shadow
+                  blurRadius: 20.0, // soften the shadow
                   spreadRadius: 0.0, //extend the shadow
                 )
               ],
