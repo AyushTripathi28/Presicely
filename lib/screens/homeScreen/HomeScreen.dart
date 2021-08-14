@@ -5,8 +5,8 @@ import 'package:simple_gradient_text/simple_gradient_text.dart';
 import 'PersonalInfo/personal_info_1.dart';
 import 'maincard.dart';
 
-class HomePage extends StatelessWidget {
-  HomePage({Key? key}) : super(key: key);
+class HomeScreen extends StatelessWidget {
+  HomeScreen({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {

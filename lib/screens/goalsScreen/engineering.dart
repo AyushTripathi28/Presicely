@@ -3,6 +3,7 @@ import 'dart:ui';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:precisely/assets/figmauploadicon_icons.dart';
+import 'package:precisely/screens/appbarbottom.dart';
 import 'package:precisely/utils/scoreScreen.dart';
 
 class Engineering extends StatefulWidget {
@@ -141,7 +142,7 @@ class _EngineeringState extends State<Engineering> {
                               iconSize: 30,
                               onPressed: () {
                                 Navigator.of(context).push(
-                                    MaterialPageRoute(builder: (context) => Scorescreen())
+                                    MaterialPageRoute(builder: (context) => AppBarBottom(value: 0))
                                 );
                                 print('Forward');
                               },

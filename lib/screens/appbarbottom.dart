@@ -16,7 +16,7 @@ class AppBarBottom extends StatefulWidget {
 class _AppBarBottomState extends State<AppBarBottom> {
   int _selectedIndex = 0;
   List<Widget> _widgetOptions = <Widget>[
-    HomePage(),
+    HomeScreen(),
     DashCard(),
     Profile()
   ];
@@ -46,7 +46,7 @@ class _AppBarBottomState extends State<AppBarBottom> {
             ),
             child: new IconButton(
                 onPressed: () => print('Clicked..'),
-                icon: new Image.asset('assets/info.png')),
+                icon: new Image.asset('assets/info1.png')),
           ),
           Container(
             margin: EdgeInsets.all(10),
