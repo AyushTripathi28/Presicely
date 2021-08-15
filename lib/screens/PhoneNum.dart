@@ -3,6 +3,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
 import 'package:precisely/screens/NameEmail.dart';
+import 'package:outline_gradient_button/outline_gradient_button.dart';
 
 
 enum OtpAuthState{
@@ -57,91 +58,139 @@ class _LoginScreenState extends State<LoginScreen> {
   }
 
 
+//enter mobile number screen
   getMobileFormWidget(context){
-    return Column(
-        mainAxisAlignment: MainAxisAlignment.center,
-        children: [
-          //Spacer(),
-          TextField(
-            controller: numbercontroller,
-            decoration: InputDecoration(
-              hintText: "Enter mobile phone",
+    return Container(
+      color: Color(0xff1E1E1E),
+        child: Container(
+          padding: EdgeInsets.all(30),
+          child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            //Spacer(),
+            TextField(
+              style: TextStyle(color: Colors.white),
+              controller: numbercontroller,
+              decoration: InputDecoration(
+                focusedBorder: UnderlineInputBorder(
+                  borderSide: BorderSide(
+                      color: Colors.white),
+                ),
+                labelStyle: TextStyle(color: Colors.white),
+                hintText: "Enter mobile phone",
+                hintStyle: TextStyle(color:Colors.white),
+              ),
             ),
-          ),
-          SizedBox(
-            height: 20,
-          ),
-          ElevatedButton(
-            onPressed: () async{
-
-              setState(() {
-                showLoading = true;
-              });
-
-              await _auth.verifyPhoneNumber(
-                phoneNumber: numbercontroller.text,
-                verificationCompleted: (phoneAuthCredential) async{
-                  setState(() {
-                    showLoading = false;
-                  });
-                  //signInWithPhoneAuthCredential(phoneAuthCredential);
-                },
-                verificationFailed: (verificationFailed) async{
-                  setState(() {
-                    showLoading = false;
-                  });
-                  //_Scaffoldkey.currentState!.showSnackBar(SnackBar(content: Text(verificationFailed.message)));
-                },
-                codeSent: (verificationId, resendingToken) async{
-                  setState(() {
-                    showLoading = false;
-                    currentState = OtpAuthState.SHOW_OTP_FORM_STATE;
-                    this.verificationId = verificationId;
-                  });
-                },
-                codeAutoRetrievalTimeout: (verificationId) async{
-                },
-              );
-            },
-            child: Text("Get otp"),
-            style: ElevatedButton.styleFrom(
-                primary: Colors.blue
+            SizedBox(
+              height: 50,
             ),
-          )
-        ]
-    );
+            OutlineGradientButton(
+              onTap: () async{
+
+                setState(() {
+                  showLoading = true;
+                });
+
+                await _auth.verifyPhoneNumber(
+                  phoneNumber: numbercontroller.text,
+                  verificationCompleted: (phoneAuthCredential) async{
+                    setState(() {
+                      showLoading = false;
+                    });
+                    //signInWithPhoneAuthCredential(phoneAuthCredential);
+                  },
+                  verificationFailed: (verificationFailed) async{
+                    setState(() {
+                      showLoading = false;
+                    });
+                    //_Scaffoldkey.currentState!.showSnackBar(SnackBar(content: Text(verificationFailed.message)));
+                  },
+                  codeSent: (verificationId, resendingToken) async{
+                    setState(() {
+                      showLoading = false;
+                      currentState = OtpAuthState.SHOW_OTP_FORM_STATE;
+                      this.verificationId = verificationId;
+                    });
+                  },
+                  codeAutoRetrievalTimeout: (verificationId) async{
+                  },
+                );
+
+              },
+              child: Text('Submit',
+                  style: TextStyle(
+                      color: Color(0xffFFFFFF),
+                      fontSize: 15,
+                      fontWeight: FontWeight.w400)),
+              gradient: LinearGradient(colors: [
+                Color(0xffFFE2CD),
+                Color(0xffFEC2E7),
+                Color(0xffC9E7FF),
+                Color(0xff86FEF4)
+              ]),
+              strokeWidth: 2,
+              padding: EdgeInsets.symmetric(horizontal: 39, vertical: 12),
+              radius: Radius.circular(8),
+            ),
+          ]
+    ),
+        ));
   }
 
+
+  //enter OTP screen
   getOtpFormWidget(context){
-    return Column(
-        mainAxisAlignment: MainAxisAlignment.center,
+    return Container(
+        color: Color(0xff1E1E1E),
+        child: Container(
+          padding: EdgeInsets.all(30),
+          child: Column(
+              mainAxisAlignment: MainAxisAlignment.center,
         children: [
           //Spacer(),
           TextField(
+            style: TextStyle(color: Colors.white),
             controller: otpcontroller,
             decoration: InputDecoration(
+              focusedBorder: UnderlineInputBorder(
+                borderSide: BorderSide(
+                    color: Colors.white),
+              ),
+              labelStyle: TextStyle(color: Colors.white),
               hintText: "Enter OTP",
-
+              hintStyle: TextStyle(color:Colors.white),
             ),
           ),
           SizedBox(
-            height: 20,
+            height: 50,
           ),
-          ElevatedButton(
-            onPressed: () async{
+          OutlineGradientButton(
+            onTap: () async{
+
               PhoneAuthCredential phoneAuthCredential =
               PhoneAuthProvider.credential(
                   verificationId: verificationId, smsCode: otpcontroller.text);
 
               signInWithPhoneAuthCredential(phoneAuthCredential);
+
             },
-            child: Text("Verify"),
-            style: ElevatedButton.styleFrom(
-                primary: Colors.grey
-            ),
-          )
+            child: Text('Verify',
+                style: TextStyle(
+                    color: Color(0xffFFFFFF),
+                    fontSize: 15,
+                    fontWeight: FontWeight.w400)),
+            gradient: LinearGradient(colors: [
+              Color(0xffFFE2CD),
+              Color(0xffFEC2E7),
+              Color(0xffC9E7FF),
+              Color(0xff86FEF4)
+            ]),
+            strokeWidth: 2,
+            padding: EdgeInsets.symmetric(horizontal: 39, vertical: 12),
+            radius: Radius.circular(8),
+          ),
         ]
-    );
+    )));
   }
 
   final GlobalKey<ScaffoldState> _Scaffoldkey = GlobalKey();
@@ -158,7 +207,7 @@ class _LoginScreenState extends State<LoginScreen> {
               : currentState == OtpAuthState.SHOW_MOBILE_FORM_STATE
               ?getMobileFormWidget(context)
               :getOtpFormWidget(context),
-          padding: const EdgeInsets.all(30),
+          //padding: const EdgeInsets.all(30),
         )
     );
   }

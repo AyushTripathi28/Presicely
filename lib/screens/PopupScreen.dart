@@ -73,7 +73,7 @@ class _PopupScreenState extends State<PopupScreen> {
                             height: 38,
                             width: 182,
                             child: Text(
-                              " historicall places like Burj ",
+                              " historical places like Burj ",
                               style: TextStyle(
                                   color: Color(0xffFFFFFF),
                                   fontSize: 15,
@@ -97,7 +97,7 @@ class _PopupScreenState extends State<PopupScreen> {
                               RoundedRectangleBorder(
                                   borderRadius: BorderRadius.circular(18.0),
                                   side: BorderSide(color: Color(0xffFFFFFF))))),
-                      onPressed: () => {},
+                      onPressed: () {},
                       child: Row(
                         // Replace with a Row for horizontal icon + text
                         children: <Widget>[
