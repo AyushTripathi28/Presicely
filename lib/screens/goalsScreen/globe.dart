@@ -65,6 +65,9 @@ class _GlobeState extends State<Globe> {
                             fontSize: 42,
                           ),
                         ),
+
+                        /// Globe Text
+
                         Container(
                           decoration: BoxDecoration(
                             color: Colors.black,

@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:precisely/screens/goalsScreen/engineering.dart';
 import 'package:precisely/utils/main_card.dart';
-import 'package:simple_gradient_text/simple_gradient_text.dart';
+import 'package:precisely/utils/scoreScreen.dart';
 
 import 'PersonalInfo/personal_info_1.dart';
 
@@ -33,7 +34,12 @@ class HomeScreen extends StatelessWidget {
                 height: 20,
               ),
               GestureDetector(
-                onTap: () {},
+                onTap: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => Engineering()),
+                  );
+                },
                 child: MainCard(
                   title: "Educational Info",
                 ),
@@ -42,6 +48,12 @@ class HomeScreen extends StatelessWidget {
                 height: 20,
               ),
               InkWell(
+                onTap: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => ScoreScreen()),
+                  );
+                },
                 child: MainCard(
                   title: "Professional Info",
                 ),
