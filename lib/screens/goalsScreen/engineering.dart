@@ -100,28 +100,28 @@ class _EngineeringState extends State<Engineering> {
                     child: Column(
                       children: [
                         SizedBox(
-                          height: 70.sp),
+                          height: 10.h),
                         Icon(
                           Figmauploadicon.rocket,
                           color: Color(0xff9BE15D),
-                          size: 280,
+                          size: 175.sp,
                         ),
                         SizedBox(
-                          height: 60.sp,
+                          height: 10.h,
                         ),
                         Text(
                           'ENGINEERING',
                           style: TextStyle(
-                              fontSize: 50,
-                              color: Color(0xff6FDE72),
+                              fontSize: 30.sp,
+                              color: Color  (0xff6FDE72),
                               fontFamily: 'Monument Extended'),
                         ),
                         SizedBox(
-                          height: 35.sp,
+                          height: 3.h,
                         ),
                         Row(
                           children: [
-                            SizedBox(width: 32.sp,),
+                            SizedBox(width: 10.w,),
                             new IconButton(
                               //alignment: Alignment(5, 0),
                               icon: Image.asset('assets/Vector_backward.png'),
@@ -134,7 +134,7 @@ class _EngineeringState extends State<Engineering> {
                                 print('Backward');
                               },
                             ),
-                            SizedBox(width: 175.sp,),
+                            SizedBox(width: 55.w,),
                             new IconButton(
                               //alignment: Alignment(32, 0),
                               icon: Image.asset('assets/Vector_forward.png'),
@@ -150,23 +150,23 @@ class _EngineeringState extends State<Engineering> {
                           ],
                         ),
                         SizedBox(
-                          height: 25.sp,
+                          height: 5.h,
                         ),
                         Text(
                           'NOTE',
                           style: TextStyle(
-                              fontSize: 20,
+                              fontSize: 15.sp,
                               color: Color(0xff969696),
                               fontFamily: 'Circular Std',
                               fontWeight: FontWeight.normal),
                         ),
-                        SizedBox(height: 5.sp,),
+                        SizedBox(height: 1.h,),
                         Padding(
                           padding: const EdgeInsets.fromLTRB(100, 10, 100, 0),
                           child: Text(
                             'In the last three years, how many years of skilled work experience do you have in Canada?',
                             style: TextStyle(
-                                fontSize: 20,
+                                fontSize: 10.sp,
                                 color: Color(0xff969696),
                                 fontFamily: 'Circular Std',
                                 fontWeight: FontWeight.normal,
