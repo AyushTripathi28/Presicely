@@ -5,7 +5,7 @@ import 'package:flutter/material.dart';
 import 'package:precisely/assets/figmauploadicon_icons.dart';
 import 'package:precisely/screens/goalsScreen/management.dart';
 import 'package:precisely/screens/goalsScreen/medicine.dart';
-import 'package:precisely/screens/goalsScreen/public_policy.dart';
+import 'package:sizer/sizer.dart';
 
 class Engineering extends StatefulWidget {
   const Engineering({Key? key}) : super(key: key);
@@ -23,7 +23,7 @@ class _EngineeringState extends State<Engineering> {
           onPressed: () {
             Navigator.of(context).pop();
           },
-          icon: Icon(Figmauploadicon.backButton,size: 15,),
+          icon: Icon(Figmauploadicon.backButton,size: 10.sp,),
         ),
         elevation: 0,
         backgroundColor: Colors.transparent,
@@ -100,15 +100,14 @@ class _EngineeringState extends State<Engineering> {
                     child: Column(
                       children: [
                         SizedBox(
-                          height: 120,
-                        ),
+                          height: 70.sp),
                         Icon(
                           Figmauploadicon.rocket,
                           color: Color(0xff9BE15D),
                           size: 280,
                         ),
                         SizedBox(
-                          height: 100,
+                          height: 60.sp,
                         ),
                         Text(
                           'ENGINEERING',
@@ -118,11 +117,11 @@ class _EngineeringState extends State<Engineering> {
                               fontFamily: 'Monument Extended'),
                         ),
                         SizedBox(
-                          height: 60,
+                          height: 35.sp,
                         ),
                         Row(
                           children: [
-                            SizedBox(width: 50,),
+                            SizedBox(width: 32.sp,),
                             new IconButton(
                               //alignment: Alignment(5, 0),
                               icon: Image.asset('assets/Vector_backward.png'),
@@ -135,7 +134,7 @@ class _EngineeringState extends State<Engineering> {
                                 print('Backward');
                               },
                             ),
-                            SizedBox(width: 270,),
+                            SizedBox(width: 175.sp,),
                             new IconButton(
                               //alignment: Alignment(32, 0),
                               icon: Image.asset('assets/Vector_forward.png'),
@@ -151,7 +150,7 @@ class _EngineeringState extends State<Engineering> {
                           ],
                         ),
                         SizedBox(
-                          height: 40,
+                          height: 25.sp,
                         ),
                         Text(
                           'NOTE',
@@ -161,7 +160,7 @@ class _EngineeringState extends State<Engineering> {
                               fontFamily: 'Circular Std',
                               fontWeight: FontWeight.normal),
                         ),
-                        SizedBox(height: 10,),
+                        SizedBox(height: 5.sp,),
                         Padding(
                           padding: const EdgeInsets.fromLTRB(100, 10, 100, 0),
                           child: Text(

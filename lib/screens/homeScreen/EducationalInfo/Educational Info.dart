@@ -19,39 +19,39 @@ class _AcademicDetails1State extends State<AcademicDetails1> {
     var screenSize = MediaQuery.of(context).size;
     return Scaffold(
       appBar: AppBar(
-        title: Text("Educational Info"),
-        leading: IconButton(
-          onPressed: () {
-            Navigator.of(context).pop();
-          },
-          icon: Icon(Icons.arrow_back),
-        ),
-        elevation: 0,
-        backgroundColor: Colors.transparent,
-        centerTitle: false,
-        actions: [
-          IconButton(
-            onPressed: () {},
-            icon: Icon(Icons.info),
+          title: Text("Educational Info"),
+          leading: IconButton(
+            onPressed: () {
+              Navigator.of(context).pop();
+            },
+            icon: Icon(Icons.arrow_back),
           ),
-          IconButton(
-            onPressed: () {},
-            icon: Icon(Icons.chat),
-          ),
-        ],
-        bottom: PreferredSize(
-          preferredSize: const Size.fromHeight(48.0),
-          child: Padding(
-            padding: const EdgeInsets.symmetric(horizontal: 20),
-            child: Container(
-              height: 50.0,
-              alignment: Alignment.center,
-              child: ProgressBar(
-                value: widget.value,
+          elevation: 0,
+          backgroundColor: Colors.transparent,
+          centerTitle: false,
+          actions: [
+            IconButton(
+              onPressed: () {},
+              icon: Icon(Icons.info),
+            ),
+            IconButton(
+              onPressed: () {},
+              icon: Icon(Icons.chat),
+            ),
+          ],
+          bottom: PreferredSize(
+            preferredSize: const Size.fromHeight(48.0),
+            child: Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 20),
+              child: Container(
+                height: 50.0,
+                alignment: Alignment.center,
+                child: ProgressBar(
+                  value: widget.value,
+                ),
               ),
             ),
           ),
-        ),
       ),
       backgroundColor: Color(0xFF1E1E1E),
       body: SingleChildScrollView(
