@@ -1,9 +1,12 @@
-// @dart=2.9
+// @dart=2.9x
 import 'dart:ui';
 import 'package:flutter/material.dart';
 import 'package:easy_gradient_text/easy_gradient_text.dart';
 import 'package:outline_gradient_button/outline_gradient_button.dart';
-import 'package:precisely/screens/goalsScreen/globe.dart';
+import 'package:precisely/screens/appbarbottom.dart';
+import 'package:precisely/screens/goalsScreen/engineering.dart';
+import 'package:precisely/screens/homeScreen/HomeScreen.dart';
+//import 'package:precisely/screens/goalsScreen/globe.dart';
 
 
 
@@ -99,7 +102,7 @@ class NameEmail extends StatelessWidget {
                 ),
               ),
               SizedBox(
-                height: 400,
+                height: 300,
               ),
               OutlineGradientButton(
                 child: Text('Submit',
@@ -110,7 +113,8 @@ class NameEmail extends StatelessWidget {
                 onTap: () {
                   Navigator.push(
                     context,
-                    MaterialPageRoute(builder: (context) => Globe()),
+                    MaterialPageRoute(builder: (context) => Engineering() )
+                        //AppBarBottom(value: 0,)),
                   );
                 },
                 gradient: LinearGradient(colors: [

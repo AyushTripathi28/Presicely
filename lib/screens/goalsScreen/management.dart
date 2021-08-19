@@ -1,21 +1,20 @@
-import 'dart:ui';
-
-
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:precisely/assets/figmauploadicon_icons.dart';
-import 'package:precisely/screens/goalsScreen/management.dart';
-import 'package:precisely/screens/goalsScreen/medicine.dart';
+import 'package:precisely/screens/appbarbottom.dart';
+import 'package:precisely/screens/goalsScreen/public_policy.dart';
 import 'package:sizer/sizer.dart';
 
-class Engineering extends StatefulWidget {
-  const Engineering({Key? key}) : super(key: key);
+import 'engineering.dart';
+
+
+class Management extends StatefulWidget {
+  const Management({Key? key}) : super(key: key);
 
   @override
-  _EngineeringState createState() => _EngineeringState();
+  _ManagementState createState() => _ManagementState();
 }
 
-class _EngineeringState extends State<Engineering> {
+class _ManagementState extends State<Management> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -24,7 +23,10 @@ class _EngineeringState extends State<Engineering> {
           onPressed: () {
             Navigator.of(context).pop();
           },
-          icon: Icon(Figmauploadicon.backButton,size: 10.sp,),
+          icon: Icon(
+            Figmauploadicon.backButton,
+            size: 10.sp,
+          ),
         ),
         elevation: 0,
         backgroundColor: Colors.transparent,
@@ -38,8 +40,8 @@ class _EngineeringState extends State<Engineering> {
                 center: Alignment(0, -0.5),
                 radius: 0.5,
                 colors: [
-                  //Color(0xff9BE15D).withOpacity(0.3),
-                  Color(0xff00E3AE).withOpacity(0.7),
+                  Color(0xff00E0FF).withOpacity(0.3),
+                  //Color(0xff004483).withOpacity(0.7),
                   Colors.transparent
                 ],
               )),
@@ -49,8 +51,8 @@ class _EngineeringState extends State<Engineering> {
                   radius: 0.05,
                   center: Alignment(0.3, -0.85),
                   colors: [
-                    Color(0xff9BE15D),
-                    Color(0xff00E3AE),
+                    Color(0xff00E0FF),
+                    Color(0xff004483),
                     Colors.transparent
                   ],
                 )),
@@ -60,8 +62,8 @@ class _EngineeringState extends State<Engineering> {
                     radius: 0.08,
                     center: Alignment(-0.75, -0.6),
                     colors: [
-                      Color(0xff9BE15D),
-                      Color(0xff00E3AE),
+                      Color(0xff00E0FF),
+                      Color(0xff004483),
                       Colors.transparent
                     ],
                   )),
@@ -71,8 +73,8 @@ class _EngineeringState extends State<Engineering> {
                       radius: 0.03,
                       center: Alignment(0.5, -0.3),
                       colors: [
-                        Color(0xff9BE15D),
-                        Color(0xff00E3AE),
+                        Color(0xff00E0FF),
+                        Color(0xff004483),
                         Colors.transparent
                       ],
                     )),
@@ -82,8 +84,8 @@ class _EngineeringState extends State<Engineering> {
                         radius: 0.06,
                         center: Alignment(0.95, -0.4),
                         colors: [
-                          Color(0xff9BE15D),
-                          Color(0xff00E3AE),
+                          Color(0xff00E0FF),
+                          Color(0xff004483),
                           Colors.transparent
                         ],
                       )),
@@ -93,28 +95,62 @@ class _EngineeringState extends State<Engineering> {
                           radius: 0.065,
                           center: Alignment(-0.95, -0),
                           colors: [
-                            Color(0xff9BE15D),
-                            Color(0xff00E3AE),
+                            Color(0xff00E0FF),
+                            Color(0xff004483),
                             Colors.transparent
                           ],
                         )),
                     child: Column(
                       children: [
                         SizedBox(
-                            height: 10.h),
-                        Icon(
-                          Figmauploadicon.rocket,
-                          color: Color(0xff9BE15D),
-                          size: 175.sp,
-                        ),
-                        SizedBox(
                           height: 10.h,
                         ),
+                        Stack(children: [
+                          Padding(
+                            padding: const EdgeInsets.fromLTRB(30, 0, 0, 0),
+                            child: Image.asset('assets/bulb.png'),
+                          ),
+                          Padding(
+                            padding: const EdgeInsets.fromLTRB(100, 90, 0, 0),
+                            child: Image.asset('assets/bulbbox.png', color: Colors.white,),
+                          ),
+                          Padding(
+                              padding: const EdgeInsets.fromLTRB(8, 110, 0, 0),
+                              child: Image.asset('assets/b-1.png')
+                          ),
+                          Padding(
+                              padding: const EdgeInsets.fromLTRB(0, 75, 0, 0),
+                              child: Image.asset('assets/b-2.png')
+                          ),
+                          Padding(
+                              padding: const EdgeInsets.fromLTRB(6, 30, 0, 0),
+                              child: Image.asset('assets/b-3.png')
+                          ),
+                          Padding(
+                              padding: const EdgeInsets.fromLTRB(35, 0, 0, 0),
+                              child: Image.asset('assets/b-4.png')
+                          ),
+                          Padding(
+                              padding: const EdgeInsets.fromLTRB(170, 10, 0, 0),
+                              child: Image.asset('assets/b-5.png')
+                          ),
+                          Padding(
+                              padding: const EdgeInsets.fromLTRB(180, 50, 0, 0),
+                              child: Image.asset('assets/b-6.png')
+                          ),
+                          Padding(
+                              padding: const EdgeInsets.fromLTRB(170, 110, 0, 0),
+                              child: Image.asset('assets/b-7.png')
+                          ),
+                        ]),
+                        SizedBox(
+                          height: 6.h,
+                        ),
                         Text(
-                          'ENGINEERING',
+                          'Management',
                           style: TextStyle(
                               fontSize: 30.sp,
-                              color: Color  (0xff6FDE72),
+                              color: Color(0xff00E0FF),
                               fontFamily: 'Monument Extended'),
                         ),
                         SizedBox(
@@ -122,29 +158,29 @@ class _EngineeringState extends State<Engineering> {
                         ),
                         Row(
                           children: [
-                            SizedBox(width: 10.w,),
+                            SizedBox(
+                              width: 10.w,
+                            ),
                             new IconButton(
                               //alignment: Alignment(5, 0),
-                              icon: Image.asset('assets/Vector_backward.png'),
-                              color: Colors.green,
+                              icon: Image.asset('assets/management-backward.png'),
                               iconSize: 30,
                               onPressed: () {
-                                Navigator.of(context).push(
-                                    MaterialPageRoute(builder: (context) => Management())
-                                );
+                                Navigator.of(context).push(MaterialPageRoute(
+                                    builder: (context) => PublicPolicy()));
                                 print('Backward');
                               },
                             ),
-                            SizedBox(width: 55.w,),
+                            SizedBox(
+                              width: 55.w,
+                            ),
                             new IconButton(
                               //alignment: Alignment(32, 0),
-                              icon: Image.asset('assets/Vector_forward.png'),
-                              color: Colors.green,
+                              icon: Image.asset('assets/management-forward.png'),
                               iconSize: 30,
                               onPressed: () {
-                                Navigator.of(context).push(
-                                    MaterialPageRoute(builder: (context) => Medicine())
-                                );
+                                Navigator.of(context).push(MaterialPageRoute(
+                                    builder: (context) => AppBarBottom(value: 0)));
                                 print('Forward');
                               },
                             ),
@@ -161,7 +197,9 @@ class _EngineeringState extends State<Engineering> {
                               fontFamily: 'Circular Std',
                               fontWeight: FontWeight.normal),
                         ),
-                        SizedBox(height: 1.h,),
+                        SizedBox(
+                          height: 1.h,
+                        ),
                         Padding(
                           padding: const EdgeInsets.fromLTRB(100, 10, 100, 0),
                           child: Text(
@@ -180,11 +218,12 @@ class _EngineeringState extends State<Engineering> {
                     alignment: Alignment(0, -0.65),
                     foregroundDecoration: BoxDecoration(
                         gradient: RadialGradient(
-                            radius: 0.15,
-                            center: Alignment(0.2, -0.55),
+                            radius: 0.25,
+                            center: Alignment(-0.03, -0.4),
+                            focalRadius: 2.5,
                             colors: [
-                              Color(0xff9BE15D).withOpacity(0.8),
-                              Color(0xff00E3AE).withOpacity(0.8),
+                              Color(0xff00E0FF).withOpacity(1),
+                              Color(0xff096C7A).withOpacity(0.5),
                               Colors.transparent
                             ])),
                   ),

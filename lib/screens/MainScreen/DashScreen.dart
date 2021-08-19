@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:precisely/screens/MainScreen/dashscreencard.dart';
-import 'package:simple_gradient_text/simple_gradient_text.dart';
+import 'package:precisely/screens/MainScreen/resume_sub.dart';
+//import 'package:simple_gradient_text/simple_gradient_text.dart';
 
 
 class DashCard extends StatelessWidget {
@@ -19,7 +20,13 @@ class DashCard extends StatelessWidget {
               runSpacing: 20,
               children: [
                 InkWell(
-                  onTap: () {},
+                  onTap: () {
+                    Navigator.of(context).push(
+                      MaterialPageRoute(
+                        builder: (context) => ResumeSubCard(),
+                      ),
+                    );
+                  },
                   child: SectionMainCard(
                     title: "Resume Submission",
                     customIcon:   Image.asset('assets/image1.png',height: 50,width: 50,),

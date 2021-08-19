@@ -1,4 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:outline_gradient_button/outline_gradient_button.dart';
+import 'package:precisely/screens/appbarbottom.dart';
+import 'package:precisely/screens/homeScreen/HomeScreen.dart';
+import 'package:precisely/screens/utils/progrssbar.dart';
+import 'package:precisely/utils/custom_card.dart';
+
 
 class Achievements extends StatefulWidget {
   const Achievements({Key? key}) : super(key: key);
@@ -33,66 +39,185 @@ class _AchievementsState extends State<Achievements> {
           ),
         ],
         bottom: PreferredSize(
-          preferredSize: const Size.fromHeight(48.0),
-          child: Padding(
-            padding: const EdgeInsets.symmetric(horizontal: 20),
-            child: Container(
-              height: 50.0,
-              alignment: Alignment.center,
-              // child: ProgressBar(
-              //   value: widget.value,
-              // ),
-            ),
+          preferredSize: const Size.fromHeight(25.0),
+          child: ProgressBar(
+            value: 0, //widget.value
           ),
         ),
       ),
       backgroundColor: Color(0xFF1E1E1E),
-      body: SingleChildScrollView(
-        physics: BouncingScrollPhysics(),
-        child: Container(
-          child: Column(
-            crossAxisAlignment: CrossAxisAlignment.center,
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-              Padding(
-                padding: const EdgeInsets.all(20.0),
+      body: Padding(
+        padding: const EdgeInsets.all(20.0),
+        child: SingleChildScrollView(
+            physics: BouncingScrollPhysics(),
+            child: Container(
+              decoration: BoxDecoration(
+                gradient: LinearGradient(
+                  begin: Alignment.topLeft,
+                  end: Alignment.bottomRight,
+                  colors: [
+                    Color(0xff32383E),
+                    Color(0xff17191C),
+                  ],
+                ),
+                borderRadius: BorderRadius.circular(20),
+                boxShadow: [
+                  BoxShadow(
+                    color: Color(0xff000000),
+                    blurRadius: 10.0, // soften the shadow
+                    spreadRadius: 0.0, //extend the shadow
+                  )
+                ],
+              ),
+              child: Padding(
+                padding: const EdgeInsets.all(8.0),
                 child: Container(
+                  // height: height,
+                  // width: width,
                   decoration: BoxDecoration(
+                    gradient: LinearGradient(
+                      begin: Alignment.topLeft,
+                      end: Alignment.bottomRight,
+                      colors: [
+                        Color(0xffC8D5E1).withOpacity(0.09),
+                        Color(0xff000000).withOpacity(0.2),
+                      ],
+                    ),
                     borderRadius: BorderRadius.circular(20),
-                    color: Color(0xFF32383E),
                   ),
                   child: Padding(
-                    padding: const EdgeInsets.all(8.0),
-                    child: Card(
-                      color: Colors.transparent,
-                      shape: RoundedRectangleBorder(
-                          borderRadius: BorderRadius.circular(20),
-                          side: BorderSide(color: Colors.black, width: 2)),
-                      child: Padding(
-                        padding: const EdgeInsets.all(10.0),
-                        child: Column(
-                          mainAxisAlignment: MainAxisAlignment.start,
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          children: [
-                            SizedBox(
-                              height: 10,
-                            ),
-                            Text("Important",
-                                style: TextStyle(
-                                    fontSize: 15, color: Colors.grey)),
-                            SizedBox(
-                              height: 20,
-                            ),
+                    padding: EdgeInsets.all(1.5), // white outline width
+                    child: DecoratedBox(
+                      decoration: BoxDecoration(
+                        gradient: LinearGradient(
+                          begin: Alignment.topLeft,
+                          end: Alignment.bottomRight,
+                          colors: [
+                            Color(0xff32383E),
+                            Color(0xff17191C),
                           ],
+                        ),
+                        borderRadius: BorderRadius.circular(20),
+                      ),
+                      child: Center(
+                        child: Padding(
+                          padding: const EdgeInsets.all(10.0),
+                          child: Column(
+                            mainAxisAlignment: MainAxisAlignment.start,
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                              SizedBox(
+                                height: 10,
+                              ),
+                              Text("Important",
+                                  style: TextStyle(
+                                      fontSize: 15, color: Colors.grey)),
+                              SizedBox(
+                                height: 20,
+                              ),
+                              Text(
+                                  "Please select a relevent category and answer the cooresponding question",
+                                  style: TextStyle(
+                                      fontSize: 20, color: Colors.white)),
+                              SizedBox(
+                                height: 20,
+                              ),
+                              CustomCard(
+                                title: "MUNS",
+                                opt1: "National",
+                                opt2: "Regional",
+                                opt3: "District",
+                                optV1: 0,
+                                optV2: 10,
+                                optV3: 20,
+                              ),
+                              CustomCard(
+                                title: "Olympiads",
+                                opt1: "National",
+                                opt2: "Regional",
+                                opt3: "District",
+                                optV1: 0,
+                                optV2: 10,
+                                optV3: 20,
+                              ),
+                              CustomCard(
+                                title: "Quiz Competition",
+                                opt1: "National",
+                                opt2: "Regional",
+                                opt3: "District",
+                                optV1: 0,
+                                optV2: 10,
+                                optV3: 20,
+                              ),
+                              CustomCard(
+                                title: "Community Service",
+                                opt1: "0-2 yrs",
+                                opt2: "2-3 yrs",
+                                opt3: "3-4 yrs",
+                                optV1: 0,
+                                optV2: 10,
+                                optV3: 20,
+                              ),
+                              CustomCard(
+                                title: "Volunteer Work",
+                                opt1: "0-2 yrs",
+                                opt2: "2-3 yrs",
+                                opt3: "3-4 yrs",
+                                optV1: 0,
+                                optV2: 10,
+                                optV3: 20,
+                              ),
+                              CustomCard(
+                                title: "Student Council",
+                                opt1: "0-2 yrs",
+                                opt2: "2-3 yrs",
+                                opt3: "3-4 yrs",
+                                optV1: 0,
+                                optV2: 10,
+                                optV3: 20,
+                              ),
+                              SizedBox(
+                                height: 20,
+                              ),
+                              Padding(
+                                padding: const EdgeInsets.all(8.0),
+                                child: Align(
+                                  alignment: Alignment.centerRight,
+                                  child: OutlineGradientButton(
+                                    child: Text('Submit',
+                                        style: TextStyle(
+                                            color: Color(0xffFFFFFF),
+                                            fontSize: 15,
+                                            fontWeight: FontWeight.w400)),
+                                    onTap: () {
+                                      Navigator.of(context).push(
+                                        MaterialPageRoute(
+                                          builder: (context) => AppBarBottom(value: 0,),
+                                        ),
+                                      );
+                                    },
+                                    gradient: LinearGradient(colors: [
+                                      Color(0xffFFE2CD),
+                                      Color(0xffFEC2E7),
+                                      Color(0xffC9E7FF),
+                                      Color(0xff86FEF4)
+                                    ]),
+                                    strokeWidth: 2,
+                                    padding: EdgeInsets.symmetric(
+                                        horizontal: 30, vertical: 12),
+                                    radius: Radius.circular(8),
+                                  ),
+                                ),
+                              ),
+                            ],
+                          ),
                         ),
                       ),
                     ),
                   ),
                 ),
-              )
-            ],
-          ),
-        ),
+              ),
+            )),
       ),
     );
   }

@@ -1,6 +1,6 @@
 import 'package:outline_gradient_button/outline_gradient_button.dart';
+import 'package:precisely/screens/appbarbottom.dart';
 import 'package:simple_gradient_text/simple_gradient_text.dart';
-//import 'package:easy_gradient_text/easy_gradient_text.dart';
 import 'package:flutter/material.dart';
 
 class PersonalInfoPage extends StatefulWidget {
@@ -576,12 +576,18 @@ class _PersonalInfoPageState extends State<PersonalInfoPage> {
       floatingActionButton: Padding(
         padding: const EdgeInsets.only(right: 30,bottom: 30),
         child: OutlineGradientButton(
-          child: Text('Finish',
+          child: Text('Submit',
               style: TextStyle(
                   color: Color(0xffFFFFFF),
                   fontSize: 15,
                   fontWeight: FontWeight.w400)),
-          onTap: () {},
+          onTap: () {
+            Navigator.of(context).push(
+                MaterialPageRoute(
+                  builder: (context) => AppBarBottom(value: 0,),
+                ),
+            );
+          },
           gradient: LinearGradient(colors: [
             Color(0xffFFE2CD),
             Color(0xffFEC2E7),

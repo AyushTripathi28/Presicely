@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:simple_gradient_text/simple_gradient_text.dart';
+import 'package:precisely/screens/homeScreen/EducationalInfo/education.dart';
+import 'package:precisely/screens/homeScreen/ProfessionalExperience/achievements.dart';
+import 'package:precisely/screens/utils/scoreScreen.dart';
+//import 'package:simple_gradient_text/simple_gradient_text.dart';
 //import 'package:easy_gradient_text/easy_gradient_text.dart]';
 
 import 'PersonalInfo/personal_info_1.dart';
@@ -50,8 +53,13 @@ class HomeScreen extends StatelessWidget {
               SizedBox(
                 height: 20,
               ),
-              GestureDetector(
-                onTap: () {},
+              InkWell(
+                onTap: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => EducationPage(value: 0,)),
+                  );
+                },
                 child: MainCard(
                   title: "Educational Info",
                 ),
@@ -60,6 +68,12 @@ class HomeScreen extends StatelessWidget {
                 height: 20,
               ),
               InkWell(
+                onTap: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => Achievements()),
+                  );
+                },
                 child: MainCard(
                   title: "Professional Info",
                 ),
@@ -70,6 +84,20 @@ class HomeScreen extends StatelessWidget {
               InkWell(
                 child: MainCard(
                   title: "Work Experience Info",
+                ),
+              ),
+              SizedBox(
+                height : 20,
+              ),
+              InkWell(
+                onTap: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => ScoreScreen()),
+                  );
+                },
+                child: MainCard(
+                  title: "Score",
                 ),
               ),
             ],
