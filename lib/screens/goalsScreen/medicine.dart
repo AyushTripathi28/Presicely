@@ -165,7 +165,7 @@ class _MedicineState extends State<Medicine> {
                           height: 1.h,
                         ),
                         Padding(
-                          padding: const EdgeInsets.fromLTRB(100, 10, 100, 0),
+                          padding: const EdgeInsets.fromLTRB(90, 10, 90, 0),
                           child: Text(
                             'In the last three years, how many years of skilled work experience do you have in Canada?',
                             style: TextStyle(
