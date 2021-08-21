@@ -136,10 +136,11 @@ class _CustomCardState extends State<CustomCard> {
           childrenPadding: EdgeInsets.symmetric(vertical: 10, horizontal: 0),
           expandedCrossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            Text(
-              "Select marks range.",
-              style: TextStyle(color: Colors.grey),
-            ),
+            // Text(
+            //   "select",
+            //   style: TextStyle(color: Colors.grey,fontSize: 5),
+            //
+            // ),
             SizedBox(
               height: 10,
             ),

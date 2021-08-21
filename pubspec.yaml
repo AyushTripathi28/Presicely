@@ -30,6 +30,8 @@ dependencies:
   cupertino_icons: ^1.0.2
   simple_gradient_text: ^1.2.2
   sizer: ^2.0.13
+  file_picker: ^4.0.0
+  firebase_storage: ^10.0.2
 
 dev_dependencies:
   flutter_test:
@@ -48,8 +50,6 @@ dev_dependencies:
   flutter_gradients: ^1.0.0+3
   shared_preferences: ^2.0.6
   step_progress_indicator: ^1.0.1
-  file_picker:
-  firebase_storage:
   percent_indicator:
   material_design_icons_flutter: ^4.0.5955
   new_gradient_app_bar: ^0.2.0

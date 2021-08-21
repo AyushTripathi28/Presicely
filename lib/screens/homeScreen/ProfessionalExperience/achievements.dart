@@ -4,6 +4,7 @@ import 'package:precisely/screens/appbarbottom.dart';
 import 'package:precisely/screens/homeScreen/HomeScreen.dart';
 import 'package:precisely/screens/utils/progrssbar.dart';
 import 'package:precisely/utils/custom_card.dart';
+import 'package:simple_gradient_text/simple_gradient_text.dart';
 
 
 class Achievements extends StatefulWidget {
@@ -18,7 +19,21 @@ class _AchievementsState extends State<Achievements> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("Achievements"),
+          title: GradientText(
+            'Precisely',
+            style: TextStyle(
+              letterSpacing: 0.02,
+              fontStyle: FontStyle.normal,
+              fontWeight: FontWeight.bold,
+              fontSize: 22,
+            ),
+            colors: [
+              Color(0xffFFE2CD),
+              Color(0xfffec2e7),
+              Color(0XffC9E7FF),
+              Color(0xff86FEF4),
+            ],
+          ),
         leading: IconButton(
           onPressed: () {
             Navigator.of(context).pop();
@@ -28,14 +43,29 @@ class _AchievementsState extends State<Achievements> {
         elevation: 0,
         backgroundColor: Colors.transparent,
         centerTitle: false,
-        actions: [
-          IconButton(
-            onPressed: () {},
-            icon: Icon(Icons.info),
+        actions: <Widget>[
+          Container(
+            height: 35,
+            width: 35,
+            decoration: BoxDecoration(
+              shape: BoxShape.circle,
+              border: Border.all(color: Colors.blueGrey),
+            ),
+            child: new IconButton(
+                onPressed: () => print('Clicked..'),
+                icon: new Image.asset('assets/info1.png')),
           ),
-          IconButton(
-            onPressed: () {},
-            icon: Icon(Icons.chat),
+          Container(
+            margin: EdgeInsets.all(10),
+            height: 35,
+            width: 35,
+            decoration: BoxDecoration(
+                shape: BoxShape.circle,
+                border: Border.all(color: Colors.blueGrey)),
+            child: new IconButton(
+              onPressed: () => print('Clicked..'),
+              icon: new Image.asset('assets/Vector.png'),
+            ),
           ),
         ],
         bottom: PreferredSize(

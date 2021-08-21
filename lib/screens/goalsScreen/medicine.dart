@@ -16,6 +16,7 @@ class _MedicineState extends State<Medicine> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      //extendBodyBehindAppBar: true,
       appBar: AppBar(
         leading: IconButton(
           onPressed: () {
@@ -105,11 +106,11 @@ class _MedicineState extends State<Medicine> {
                         ),
                         Image.asset(
                           'assets/Medicine.png',
-                          scale: 0.8.sp,
+                          scale: 0.9.sp,
                         ),
-                        SizedBox(
-                          height: 10.h,
-                        ),
+                        // SizedBox(
+                        //   height: 10.h,
+                        // ),
                         Text(
                           'Medicine',
                           style: TextStyle(
@@ -151,7 +152,7 @@ class _MedicineState extends State<Medicine> {
                           ],
                         ),
                         SizedBox(
-                          height: 5.h,
+                          height: 3.h,
                         ),
                         Text(
                           'NOTE',

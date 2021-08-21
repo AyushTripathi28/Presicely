@@ -28,7 +28,7 @@ class _PersonalInfoPageState extends State<PersonalInfoPage> {
             ),
             child: new IconButton(
                 onPressed: () => print('Clicked..'),
-                icon: new Image.asset('assets/info.png')),
+                icon: new Image.asset('assets/info1.png')),
           ),
           Container(
             margin: EdgeInsets.all(10),
@@ -44,7 +44,7 @@ class _PersonalInfoPageState extends State<PersonalInfoPage> {
           ),
         ],
         title: GradientText(
-           'Precisely',
+          'Precisely',
           style: TextStyle(
             letterSpacing: 0.02,
             fontStyle: FontStyle.normal,
@@ -560,7 +560,7 @@ class _PersonalInfoPageState extends State<PersonalInfoPage> {
                                 ],
                               ),
                             ),
-                            width: 322,
+                            width: 300,
                             height: 150,
                           ),
                         )
