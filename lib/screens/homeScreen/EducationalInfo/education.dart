@@ -29,7 +29,7 @@ class _EducationPageState extends State<EducationPage> {
     return Scaffold(
       appBar: AppBar(
         title: GradientText(
-          'Precisely',
+          'Academic Info',
           style: TextStyle(
             letterSpacing: 0.02,
             fontStyle: FontStyle.normal,

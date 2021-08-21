@@ -44,7 +44,7 @@ class _PersonalInfoPageState extends State<PersonalInfoPage> {
           ),
         ],
         title: GradientText(
-          'Precisely',
+          'Personal Info',
           style: TextStyle(
             letterSpacing: 0.02,
             fontStyle: FontStyle.normal,

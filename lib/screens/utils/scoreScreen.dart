@@ -11,6 +11,21 @@ class ScoreScreen extends StatelessWidget {
     return Scaffold(
       backgroundColor: Color(0xff1E1E1E),
       appBar: AppBar(
+        title: GradientText(
+          'Score',
+          style: TextStyle(
+            letterSpacing: 0.02,
+            fontStyle: FontStyle.normal,
+            fontWeight: FontWeight.bold,
+            fontSize: 22,
+          ),
+          colors: [
+            Color(0xffFFE2CD),
+            Color(0xfffec2e7),
+            Color(0XffC9E7FF),
+            Color(0xff86FEF4),
+          ],
+        ),
         leading: IconButton(
           onPressed: () {
             Navigator.of(context).pop();
@@ -32,7 +47,7 @@ class ScoreScreen extends StatelessWidget {
             ),
             child: new IconButton(
                 onPressed: () => print('Clicked..'),
-                icon: new Image.asset('assets/info_icon.png')),
+                icon: new Image.asset('assets/info1.png')),
           ),
           Container(
             margin: EdgeInsets.all(10),
@@ -43,7 +58,7 @@ class ScoreScreen extends StatelessWidget {
                 border: Border.all(color: Colors.blueGrey)),
             child: new IconButton(
               onPressed: () => print('Clicked..'),
-              icon: new Image.asset('assets/chat.png'),
+              icon: new Image.asset('assets/Vector.png'),
             ),
           ),
         ],
@@ -60,7 +75,7 @@ class ScoreScreen extends StatelessWidget {
             ),
             GradientText(
               '178',
-              style: TextStyle(fontSize: 150, fontWeight: FontWeight.bold),
+              style: TextStyle(fontSize: 80, fontWeight: FontWeight.bold),
               //gradient: LinearGradient(
               colors: [
                 Color(0xffFFE2CD),

@@ -19,7 +19,7 @@ class _AchievementsState extends State<Achievements> {
     return Scaffold(
       appBar: AppBar(
         title: GradientText(
-          'Precisely',
+          'Achievements',
           style: TextStyle(
             letterSpacing: 0.02,
             fontStyle: FontStyle.normal,
