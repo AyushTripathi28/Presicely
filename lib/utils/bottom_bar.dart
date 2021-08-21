@@ -127,7 +127,8 @@ class _AppBarBottomState extends State<AppBarBottom> {
                     ),
                     activeIcon: new Image.asset('assets/user_gradient.png'),
                     label: ''),
-              ]),
+              ]
+          ),
         ),
       ),
     );

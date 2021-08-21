@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:precisely/screens/goalsScreen/engineering.dart';
 import 'package:precisely/utils/main_card.dart';
 import 'package:precisely/utils/scoreScreen.dart';
+import 'package:precisely/utils/step_1_submit.dart';
+import 'package:precisely/utils/step_2_submit.dart';
 
 import 'PersonalInfo/personal_info_1.dart';
 
@@ -62,6 +64,12 @@ class HomeScreen extends StatelessWidget {
                 height: 20,
               ),
               InkWell(
+                onTap: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => StepSubmit2()),
+                  );
+                },
                 child: MainCard(
                   title: "Work Experience Info",
                 ),

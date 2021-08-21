@@ -1,7 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:outline_gradient_button/outline_gradient_button.dart';
-import 'package:precisely/assets/figmauploadicon_icons.dart';
+import 'package:precisely/assets/figmaUploadIcon_icons.dart';
 
 
 class LoadingPersonal extends StatefulWidget {

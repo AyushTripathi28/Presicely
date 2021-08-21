@@ -1,9 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:outline_gradient_button/outline_gradient_button.dart';
-import 'package:precisely/assets/figmauploadicon_icons.dart';
+import 'package:precisely/assets/figmaUploadIcon_icons.dart';
 import 'package:progress_indicator/progress_indicator.dart';
 import 'package:simple_gradient_text/simple_gradient_text.dart';
-
 
 class ScoreScreen extends StatelessWidget {
   @override
@@ -52,9 +51,9 @@ class ScoreScreen extends StatelessWidget {
         child: Column(
           children: [
             Container(
-              alignment: Alignment.center,
-              margin: EdgeInsets.fromLTRB(50, 30, 40, 30),
-              padding: EdgeInsets.all(20),
+              //alignment: Alignment.center,
+              //margin: EdgeInsets.fromLTRB(50, 30, 40, 30),
+              padding: EdgeInsets.only(top: 20),
               //height: 100,
               width: 230,
             ),
@@ -73,21 +72,34 @@ class ScoreScreen extends StatelessWidget {
             SizedBox(
               height: 20,
             ),
-            Text('Your Score', style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold, color: Colors.white)),
+            Text('Your Score',
+                style: TextStyle(
+                    fontSize: 18,
+                    fontWeight: FontWeight.bold,
+                    color: Colors.white)),
             SizedBox(
               height: 15,
             ),
-            Text('This is more than 70% of the users', style: TextStyle(fontSize: 16, color: Colors.grey)),
+            Text('This is more than 70% of the users',
+                style: TextStyle(fontSize: 16, color: Colors.grey)),
             SizedBox(
               height: 20,
             ),
             OutlineGradientButton(
               child: Padding(
                 padding: const EdgeInsets.fromLTRB(50, 10, 50, 10),
-                child: Text('View Tracks', style: TextStyle(color: Colors.white, fontSize: 18),),
+                child: Text(
+                  'View Tracks',
+                  style: TextStyle(color: Colors.white, fontSize: 18),
+                ),
               ),
               gradient: LinearGradient(
-                colors: [Color(0xffFFE2CD), Color(0xffFEC2E7), Color(0xffC9E7FF), Color(0xff86FEF4)],
+                colors: [
+                  Color(0xffFFE2CD),
+                  Color(0xffFEC2E7),
+                  Color(0xffC9E7FF),
+                  Color(0xff86FEF4)
+                ],
               ),
               strokeWidth: 2,
               radius: Radius.circular(10),
@@ -100,7 +112,9 @@ class ScoreScreen extends StatelessWidget {
                     padding: EdgeInsets.all(10),
                     height: 150,
                     width: 150,
-                    decoration: BoxDecoration(borderRadius: BorderRadius.circular(15), color: Colors.transparent),
+                    decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(15),
+                        color: Colors.transparent),
                     child: Image.asset(
                       "assets/screen1.jpeg",
                       height: 150,
@@ -111,7 +125,8 @@ class ScoreScreen extends StatelessWidget {
                     padding: EdgeInsets.all(10),
                     height: 150,
                     width: 150,
-                    decoration: BoxDecoration(borderRadius: BorderRadius.circular(24)),
+                    decoration:
+                        BoxDecoration(borderRadius: BorderRadius.circular(24)),
                     child: Image.asset(
                       "assets/screen2.jpeg",
                       height: 150,
@@ -135,7 +150,10 @@ class ScoreScreen extends StatelessWidget {
                   Text(
                     "Probability of Regions",
                     textAlign: TextAlign.left,
-                    style: TextStyle(color: Color(0xff616161), fontSize: 12, fontWeight: FontWeight.w400),
+                    style: TextStyle(
+                        color: Color(0xff616161),
+                        fontSize: 12,
+                        fontWeight: FontWeight.w400),
                   ),
                   SizedBox(
                     height: 11,
@@ -151,7 +169,11 @@ class ScoreScreen extends StatelessWidget {
                     stroke: 4,
                   ),
                   Padding(padding: EdgeInsets.only(bottom: 2)),
-                  Text('Asia', style: TextStyle(fontSize: 12, fontWeight: FontWeight.bold, color: Color(0xffB276FF))),
+                  Text('Asia',
+                      style: TextStyle(
+                          fontSize: 12,
+                          fontWeight: FontWeight.bold,
+                          color: Color(0xffB276FF))),
                   BarProgress(
                     percentage: 75,
                     backColor: Color(0xff000000),
@@ -163,7 +185,11 @@ class ScoreScreen extends StatelessWidget {
                     stroke: 4,
                   ),
                   Padding(padding: EdgeInsets.only(bottom: 2)),
-                  Text('North America', style: TextStyle(fontSize: 12, fontWeight: FontWeight.bold, color: Color(0xffFF7676))),
+                  Text('North America',
+                      style: TextStyle(
+                          fontSize: 12,
+                          fontWeight: FontWeight.bold,
+                          color: Color(0xffFF7676))),
                   BarProgress(
                     percentage: 40,
                     backColor: Color(0xff000000),
@@ -175,7 +201,11 @@ class ScoreScreen extends StatelessWidget {
                     stroke: 4,
                   ),
                   Padding(padding: EdgeInsets.only(bottom: 2)),
-                  Text('Australia', style: TextStyle(fontSize: 12, fontWeight: FontWeight.bold, color: Color(0xff57B599))),
+                  Text('Australia',
+                      style: TextStyle(
+                          fontSize: 12,
+                          fontWeight: FontWeight.bold,
+                          color: Color(0xff57B599))),
                   BarProgress(
                     percentage: 90,
                     backColor: Color(0xff000000),
@@ -187,7 +217,11 @@ class ScoreScreen extends StatelessWidget {
                     stroke: 4,
                   ),
                   Padding(padding: EdgeInsets.only(bottom: 2)),
-                  Text('West Europe', style: TextStyle(fontSize: 12, fontWeight: FontWeight.bold, color: Color(0xffCB813E))),
+                  Text('West Europe',
+                      style: TextStyle(
+                          fontSize: 12,
+                          fontWeight: FontWeight.bold,
+                          color: Color(0xffCB813E))),
                   BarProgress(
                     percentage: 60,
                     backColor: Color(0xff000000),
@@ -198,7 +232,11 @@ class ScoreScreen extends StatelessWidget {
                     showPercentage: false,
                     stroke: 4,
                   ),
-                  Text('East Europe', style: TextStyle(fontSize: 12, fontWeight: FontWeight.bold, color: Color(0xffCB3EC5))),
+                  Text('East Europe',
+                      style: TextStyle(
+                          fontSize: 12,
+                          fontWeight: FontWeight.bold,
+                          color: Color(0xffCB3EC5))),
                 ],
               ),
             ),
@@ -210,7 +248,9 @@ class ScoreScreen extends StatelessWidget {
                     padding: EdgeInsets.all(20),
                     height: 150,
                     width: 150,
-                    decoration: BoxDecoration(borderRadius: BorderRadius.circular(24), color: Colors.grey[850]),
+                    decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(24),
+                        color: Colors.grey[850]),
                   ),
                   SizedBox(
                     width: 10,
@@ -219,24 +259,39 @@ class ScoreScreen extends StatelessWidget {
                     padding: EdgeInsets.all(20),
                     height: 150,
                     width: 150,
-                    decoration: BoxDecoration(borderRadius: BorderRadius.circular(24), color: Colors.grey[850]),
+                    decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(24),
+                        color: Colors.grey[850]),
                     child: Column(
                       children: [
-                        Text('Last Mock Test', style: TextStyle(fontSize: 15, fontWeight: FontWeight.bold, color: Colors.white)),
+                        Text('Last Mock Test',
+                            style: TextStyle(
+                                fontSize: 15,
+                                fontWeight: FontWeight.bold,
+                                color: Colors.white)),
                         SizedBox(
                           height: 10,
                         ),
                         Row(
                           children: [
-                            Text('83%', style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold, color: Colors.white)),
+                            Text('83%',
+                                style: TextStyle(
+                                    fontSize: 20,
+                                    fontWeight: FontWeight.bold,
+                                    color: Colors.white)),
                             Icon(
                               Icons.arrow_drop_up_outlined,
                               color: Colors.green,
                             ),
-                            Text('5%', style: TextStyle(fontSize: 15, fontWeight: FontWeight.bold, color: Colors.green)),
+                            Text('5%',
+                                style: TextStyle(
+                                    fontSize: 15,
+                                    fontWeight: FontWeight.bold,
+                                    color: Colors.green)),
                           ],
                         ),
-                        Text('Compared to\n74% last exam', style: TextStyle(fontSize: 15, color: Colors.grey)),
+                        Text('Compared to\n74% last exam',
+                            style: TextStyle(fontSize: 15, color: Colors.grey)),
                       ],
                     ),
                   ),
@@ -253,7 +308,11 @@ class ScoreScreen extends StatelessWidget {
               ),
               child: Column(
                 children: [
-                  Text('People with a similar profile intreset', style: TextStyle(fontSize: 15, fontWeight: FontWeight.bold, color: Colors.grey)),
+                  Text('People with a similar profile interest',
+                      style: TextStyle(
+                          fontSize: 15,
+                          fontWeight: FontWeight.bold,
+                          color: Colors.grey)),
                   SizedBox(
                     height: 10,
                   ),
@@ -261,9 +320,17 @@ class ScoreScreen extends StatelessWidget {
                     children: [
                       Column(
                         children: [
-                          Text('Civil Engineering', style: TextStyle(fontSize: 15, fontWeight: FontWeight.bold, color: Colors.white)),
-                          Text('Product Design', style: TextStyle(fontSize: 15, color: Colors.grey)),
-                          Text('M.Arch Test', style: TextStyle(fontSize: 15, color: Colors.grey)),
+                          Text('Civil Engineering',
+                              style: TextStyle(
+                                  fontSize: 15,
+                                  fontWeight: FontWeight.bold,
+                                  color: Colors.white)),
+                          Text('Product Design',
+                              style:
+                                  TextStyle(fontSize: 15, color: Colors.grey)),
+                          Text('M.Arch Test',
+                              style:
+                                  TextStyle(fontSize: 15, color: Colors.grey)),
                         ],
                       ),
                       Image.asset("assets/man.png", scale: 1.5),
@@ -279,10 +346,16 @@ class ScoreScreen extends StatelessWidget {
               padding: EdgeInsets.all(20),
               height: 150,
               width: 300,
-              decoration: BoxDecoration(borderRadius: BorderRadius.circular(24), color: Colors.grey[850]),
+              decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(24),
+                  color: Colors.grey[850]),
               child: Column(
                 children: [
-                  Text('Mandatory Legal Formalities', style: TextStyle(fontSize: 15, fontWeight: FontWeight.bold, color: Colors.grey)),
+                  Text('Mandatory Legal Formalities',
+                      style: TextStyle(
+                          fontSize: 15,
+                          fontWeight: FontWeight.bold,
+                          color: Colors.grey)),
                   SizedBox(
                     height: 10,
                   ),
@@ -294,7 +367,11 @@ class ScoreScreen extends StatelessWidget {
                             Icons.check_outlined,
                             color: Colors.green,
                           ),
-                          Text('Passport', style: TextStyle(fontSize: 15, fontWeight: FontWeight.bold, color: Colors.white)),
+                          Text('Passport',
+                              style: TextStyle(
+                                  fontSize: 15,
+                                  fontWeight: FontWeight.bold,
+                                  color: Colors.white)),
                         ],
                       ),
                       Row(
@@ -303,7 +380,11 @@ class ScoreScreen extends StatelessWidget {
                             Icons.close_outlined,
                             color: Colors.red,
                           ),
-                          Text('Income Documents', style: TextStyle(fontSize: 15, fontWeight: FontWeight.bold, color: Colors.white)),
+                          Text('Income Documents',
+                              style: TextStyle(
+                                  fontSize: 15,
+                                  fontWeight: FontWeight.bold,
+                                  color: Colors.white)),
                         ],
                       ),
                       Row(
@@ -312,7 +393,11 @@ class ScoreScreen extends StatelessWidget {
                             Icons.close_outlined,
                             color: Colors.red,
                           ),
-                          Text('English Proficiency Test', style: TextStyle(fontSize: 15, fontWeight: FontWeight.bold, color: Colors.white)),
+                          Text('English Proficiency Test',
+                              style: TextStyle(
+                                  fontSize: 15,
+                                  fontWeight: FontWeight.bold,
+                                  color: Colors.white)),
                         ],
                       ),
                     ],

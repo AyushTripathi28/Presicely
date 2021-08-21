@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:precisely/assets/figmauploadicon_icons.dart';
+import 'package:precisely/assets/figmaUploadIcon_icons.dart';
 import 'package:precisely/screens/goalsScreen/engineering.dart';
 
 class Globe extends StatefulWidget {

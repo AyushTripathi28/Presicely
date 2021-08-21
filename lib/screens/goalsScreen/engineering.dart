@@ -2,9 +2,10 @@ import 'dart:ui';
 
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:precisely/assets/figmauploadicon_icons.dart';
+import 'package:precisely/assets/figmaUploadIcon_icons.dart';
 import 'package:precisely/screens/goalsScreen/management.dart';
 import 'package:precisely/screens/goalsScreen/medicine.dart';
+import 'package:precisely/utils/bottom_bar.dart';
 import 'package:sizer/sizer.dart';
 
 class Engineering extends StatefulWidget {
@@ -21,7 +22,7 @@ class _EngineeringState extends State<Engineering> {
       appBar: AppBar(
         leading: IconButton(
           onPressed: () {
-            Navigator.of(context).pop();
+            Navigator.of(context).pop(AppBarBottom(value: 0));
           },
           icon: Icon(Figmauploadicon.backButton,size: 10.sp,),
         ),

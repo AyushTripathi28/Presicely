@@ -1,50 +1,54 @@
 import 'package:flutter/material.dart';
 
-class AppBarTest extends StatefulWidget {
-  const AppBarTest({Key? key}) : super(key: key);
+import 'package:precisely/assets/figmauploadicon_icons.dart';
+import 'package:sizer/sizer.dart';
+
+class TestEngineering extends StatefulWidget {
+  const TestEngineering({Key? key}) : super(key: key);
 
   @override
-  _AppBarTestState createState() => _AppBarTestState();
+  _TestEngineeringState createState() => _TestEngineeringState();
 }
 
-class _AppBarTestState extends State<AppBarTest> {
+class _TestEngineeringState extends State<TestEngineering> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Color(0xFF1E1E1E),
       appBar: AppBar(
-        title: Padding(
-          padding: const EdgeInsets.only(top: 25.0),
-          child: Text("Goal", ),
-        ),
-        leading: IconButton(
-          onPressed: () {
-            Navigator.of(context).pop();
-          },
-          icon: Icon(Icons.arrow_back),
-        ),
-        elevation: 0,
-        backgroundColor: Colors.transparent,
-        centerTitle: true,
-        actions: [
-          IconButton(
-            onPressed: () {},
-            icon: Icon(Icons.info),
+            leading: IconButton(
+              onPressed: () {
+                Navigator.of(context).pop();
+              },
+              icon: Icon(Figmauploadicon.backButton,size: 10.sp,),
+            ),
+            elevation: 0,
+            backgroundColor: Colors.transparent,
           ),
-          IconButton(
-            onPressed: () {},
-            icon: Icon(Icons.chat),
-          ),
-        ],
-        bottom: PreferredSize(
-          preferredSize: const Size.fromHeight(30.0),
-          child: Container(
-            height: 50.0,
-            alignment: Alignment.center,
-            child: Text('Harvard University', style: TextStyle(color: Colors.white, fontSize: 30), ),
+      body: Center(
+        child: Container(
+          width: 50.w,
+          height: 50.h,
+          decoration: BoxDecoration(
+            color: Color(0xFF9BE15D).withOpacity(0.1),
+            shape: BoxShape.circle,
+            boxShadow: [
+              BoxShadow(
+                color: Color(0xFF9BE15D).withOpacity(0.1),
+                offset: Offset(4, 4),
+                blurRadius: 10,
+                spreadRadius: 1,
+              ),
+              BoxShadow(
+                color: Color(0xFF00E3AE).withOpacity(0.1),
+                offset: Offset(-4, -4),
+                blurRadius: 10,
+                spreadRadius: 1,
+              ),
+            ]
           ),
         ),
       ),
-      backgroundColor: Color(0xFF1E1E1E),
     );
   }
 }
