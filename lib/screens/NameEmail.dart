@@ -3,10 +3,8 @@ import 'dart:ui';
 import 'package:flutter/material.dart';
 import 'package:easy_gradient_text/easy_gradient_text.dart';
 import 'package:outline_gradient_button/outline_gradient_button.dart';
-import 'package:precisely/screens/appbarbottom.dart';
 import 'package:precisely/screens/goalsScreen/engineering.dart';
-import 'package:precisely/screens/homeScreen/HomeScreen.dart';
-//import 'package:precisely/screens/goalsScreen/globe.dart';
+
 
 
 

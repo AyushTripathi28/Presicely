@@ -5,20 +5,24 @@ import 'package:precisely/screens/homeScreen/EducationalInfo/visa_back_in_countr
 import 'package:precisely/screens/utils/progrssbar.dart';
 import 'package:simple_gradient_text/simple_gradient_text.dart';
 
-
 import 'Educational Info.dart';
 import 'StudyCountry.dart';
 import 'major_subjects.dart';
 
 class EducationPage extends StatefulWidget {
-  const EducationPage({Key? key, required this.value}) : super(key: key);
-  final int value;
+  EducationPage({Key? key, required this.value}) : super(key: key);
+  int value;
 
   @override
   _EducationPageState createState() => _EducationPageState();
 }
 
 class _EducationPageState extends State<EducationPage> {
+  @override
+  void setState(VoidCallback fn) {
+    super.setState(fn);
+  }
+
   @override
   Widget build(BuildContext context) {
     PageController pageController = PageController(initialPage: 0);
@@ -42,6 +46,10 @@ class _EducationPageState extends State<EducationPage> {
         leading: IconButton(
           onPressed: () {
             // Navigator.of(context).pop();
+            setState(() {
+              // print(a);
+              widget.value = widget.value > 0 ? widget.value - 10 : 0;
+            });
             print(pageController.initialPage);
             pageController.page == 0
                 ? Navigator.of(context).pop()
@@ -81,37 +89,41 @@ class _EducationPageState extends State<EducationPage> {
         bottom: PreferredSize(
           preferredSize: const Size.fromHeight(25.0),
           child: ProgressBar(
-            value: 0, //widget.value
+            value: widget.value <= 100
+                ? widget.value
+                : widget.value - 20, //widget.value
           ),
         ),
       ),
       backgroundColor: Color(0xFF1E1E1E),
-      body: Padding(
-        padding: const EdgeInsets.all(20.0),
-        child: PageView(
-          physics: NeverScrollableScrollPhysics(),
-          controller: pageController,
-          children: [
-            AcademicDetails1(
-              value: 0,
-              pageController: pageController,
-            ),
-            MajorSubject(
-              value: 0,
-              pageController: pageController,
-            ),
-            StudyCountry(value: 0, pageController: pageController),
-            LiveCountry(value: 0, pageController: pageController),
-            VisaBackInCountry(
-              value: 0,
-              pageController: pageController,
-            ),
-            Scholarship(
-              value: 0,
-              pageController: pageController,
-            ),
-          ],
-        ),
+      body: PageView(
+        onPageChanged: (a) {
+          setState(() {
+            widget.value = widget.value + 5;
+          });
+        },
+        physics: NeverScrollableScrollPhysics(),
+        controller: pageController,
+        children: [
+          AcademicDetails1(
+            value: 0,
+            pageController: pageController,
+          ),
+          MajorSubject(
+            value: 0,
+            pageController: pageController,
+          ),
+          StudyCountry(value: 0, pageController: pageController),
+          LiveCountry(value: 0, pageController: pageController),
+          Scholarship(
+            value: 0,
+            pageController: pageController,
+          ),
+          VisaBackInCountry(
+            value: 0,
+            pageController: pageController,
+          ),
+        ],
       ),
     );
   }

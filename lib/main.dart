@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:precisely/screens/PhoneNum.dart';
 import 'package:firebase_core/firebase_core.dart';
-import 'package:precisely/screens/goalsScreen/engineering.dart';
 import 'package:sizer/sizer.dart';
 
 
@@ -18,7 +17,7 @@ class MyApp extends StatelessWidget {
       {
        return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: Engineering(),
+      home: LoginScreen(),
       title: "Precisely",
       // theme: ThemeData(
       //   scaffoldBackgroundColor: Color(0xff1E1E1E)
