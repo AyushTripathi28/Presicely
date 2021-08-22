@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:precisely/screens/MainScreen/resume_sub.dart';
 import 'package:precisely/utils/main_screen_card.dart';
 
 
@@ -18,7 +19,8 @@ class DashCard extends StatelessWidget {
               runSpacing: 20,
               children: [
                 InkWell(
-                  onTap: () {},
+                  onTap: () {Navigator.of(context).push(MaterialPageRoute(
+                      builder: (context) => ResumeSubCard()));},
                   child: MainScreenCard(
                     title: "Resume Submission",
                     customIcon:   Image.asset('assets/Resume_Submission.png',height: 50,width: 50,),

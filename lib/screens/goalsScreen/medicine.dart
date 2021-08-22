@@ -161,9 +161,9 @@ class _MedicineState extends State<Medicine> {
                               fontFamily: 'Circular Std',
                               fontWeight: FontWeight.normal),
                         ),
-                        SizedBox(
-                          height: 1.h,
-                        ),
+                        // SizedBox(
+                        //   height: 1.h,
+                        // ),
                         Padding(
                           padding: const EdgeInsets.fromLTRB(100, 10, 100, 0),
                           child: Text(
