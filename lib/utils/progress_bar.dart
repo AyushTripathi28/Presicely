@@ -15,7 +15,10 @@ class _ProgressBarState extends State<ProgressBar> {
 
   int addProgress() {
     setState(() {
+<<<<<<< HEAD
       _progress = 20;
+=======
+>>>>>>> cc4c9a6644a3f52941a98027a9edde9c3d057ef1
       _progress = widget.value + _progress;
     });
     return _progress;
@@ -23,6 +26,7 @@ class _ProgressBarState extends State<ProgressBar> {
 
   @override
   Widget build(BuildContext context) {
+<<<<<<< HEAD
     return Column(
       children: [
         Container(
@@ -65,6 +69,31 @@ class _ProgressBarState extends State<ProgressBar> {
           ),
         ),
       ],
+=======
+    return StepProgressIndicator(
+      totalSteps: 100,
+      currentStep: addProgress(),
+      size: 8,
+      padding: 0,
+      selectedColor: Colors.yellow,
+      unselectedColor: Colors.cyan,
+      roundedEdges: Radius.circular(30),
+      selectedGradientColor: LinearGradient(
+        begin: Alignment.topLeft,
+        end: Alignment.bottomRight,
+        colors: [
+          Color(0XFFFFE2CD),
+          Color(0XFFFEC2E7),
+          // Color(0XFFC9E7FF),
+          // Color(0XFF86FEF4)
+        ],
+      ),
+      unselectedGradientColor: LinearGradient(
+        begin: Alignment.topLeft,
+        end: Alignment.bottomRight,
+        colors: [Color(0xFF171C21), Colors.white12],
+      ),
+>>>>>>> cc4c9a6644a3f52941a98027a9edde9c3d057ef1
     );
   }
 }

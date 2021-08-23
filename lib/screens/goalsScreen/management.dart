@@ -1,5 +1,10 @@
 import 'package:flutter/material.dart';
+<<<<<<< HEAD
 import 'package:precisely/assets/figmaUploadIcon_icons.dart';
+=======
+import 'package:precisely/assets/figmauploadicon_icons.dart';
+import 'package:precisely/screens/appbarbottom.dart';
+>>>>>>> cc4c9a6644a3f52941a98027a9edde9c3d057ef1
 import 'package:precisely/screens/goalsScreen/public_policy.dart';
 import 'package:sizer/sizer.dart';
 
@@ -114,12 +119,21 @@ class _ManagementState extends State<Management> {
                             child: Image.asset('assets/bulbbox.png', color: Colors.white,),
                           ),
                           Padding(
+<<<<<<< HEAD
                             padding: const EdgeInsets.fromLTRB(8, 110, 0, 0),
                             child: Image.asset('assets/b-1.png')
                           ),
                           Padding(
                             padding: const EdgeInsets.fromLTRB(0, 75, 0, 0),
                             child: Image.asset('assets/b-2.png')
+=======
+                              padding: const EdgeInsets.fromLTRB(8, 110, 0, 0),
+                              child: Image.asset('assets/b-1.png')
+                          ),
+                          Padding(
+                              padding: const EdgeInsets.fromLTRB(0, 75, 0, 0),
+                              child: Image.asset('assets/b-2.png')
+>>>>>>> cc4c9a6644a3f52941a98027a9edde9c3d057ef1
                           ),
                           Padding(
                               padding: const EdgeInsets.fromLTRB(6, 30, 0, 0),
@@ -179,7 +193,11 @@ class _ManagementState extends State<Management> {
                               iconSize: 30,
                               onPressed: () {
                                 Navigator.of(context).push(MaterialPageRoute(
+<<<<<<< HEAD
                                     builder: (context) => Engineering()));
+=======
+                                    builder: (context) => AppBarBottom(value: 0)));
+>>>>>>> cc4c9a6644a3f52941a98027a9edde9c3d057ef1
                                 print('Forward');
                               },
                             ),
@@ -200,7 +218,11 @@ class _ManagementState extends State<Management> {
                           height: 1.h,
                         ),
                         Padding(
+<<<<<<< HEAD
                           padding: const EdgeInsets.fromLTRB(100, 10, 100, 0),
+=======
+                          padding: const EdgeInsets.fromLTRB(90, 10, 90, 0),
+>>>>>>> cc4c9a6644a3f52941a98027a9edde9c3d057ef1
                           child: Text(
                             'In the last three years, how many years of skilled work experience do you have in Canada?',
                             style: TextStyle(

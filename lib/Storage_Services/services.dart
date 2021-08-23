@@ -16,4 +16,8 @@ class MyFirebaseStorage{
       return null;
     }
   }
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> cc4c9a6644a3f52941a98027a9edde9c3d057ef1

@@ -35,6 +35,7 @@ class _PublicPolicyState extends State<PublicPolicy> {
           width: MediaQuery.of(context).size.width,
           foregroundDecoration: BoxDecoration(
               gradient: RadialGradient(
+<<<<<<< HEAD
             center: Alignment(0, -0.5),
             radius: 0.5,
             colors: [
@@ -70,34 +71,90 @@ class _PublicPolicyState extends State<PublicPolicy> {
                     gradient: RadialGradient(
                   radius: 0.03,
                   center: Alignment(0.5, -0.3),
+=======
+                center: Alignment(0, -0.5),
+                radius: 0.5,
+                colors: [
+                  //Color(0xffED81FF).withOpacity(0.3),
+                  Color(0xffDB00FF).withOpacity(0.7),
+                  Colors.transparent
+                ],
+              )),
+          child: Container(
+            decoration: BoxDecoration(
+                gradient: RadialGradient(
+                  radius: 0.05,
+                  center: Alignment(0.3, -0.85),
+>>>>>>> cc4c9a6644a3f52941a98027a9edde9c3d057ef1
                   colors: [
                     Color(0xffED81FF),
                     Color(0xffDB00FF),
                     Colors.transparent
                   ],
                 )),
+<<<<<<< HEAD
                 child: Container(
                   decoration: BoxDecoration(
                       gradient: RadialGradient(
                     radius: 0.06,
                     center: Alignment(0.95, -0.4),
+=======
+            child: Container(
+              decoration: BoxDecoration(
+                  gradient: RadialGradient(
+                    radius: 0.08,
+                    center: Alignment(-0.75, -0.6),
+>>>>>>> cc4c9a6644a3f52941a98027a9edde9c3d057ef1
                     colors: [
                       Color(0xffED81FF),
                       Color(0xffDB00FF),
                       Colors.transparent
                     ],
                   )),
+<<<<<<< HEAD
                   child: Container(
                     decoration: BoxDecoration(
                         gradient: RadialGradient(
                       radius: 0.065,
                       center: Alignment(-0.95, -0),
+=======
+              child: Container(
+                decoration: BoxDecoration(
+                    gradient: RadialGradient(
+                      radius: 0.03,
+                      center: Alignment(0.5, -0.3),
+>>>>>>> cc4c9a6644a3f52941a98027a9edde9c3d057ef1
                       colors: [
                         Color(0xffED81FF),
                         Color(0xffDB00FF),
                         Colors.transparent
                       ],
                     )),
+<<<<<<< HEAD
+=======
+                child: Container(
+                  decoration: BoxDecoration(
+                      gradient: RadialGradient(
+                        radius: 0.06,
+                        center: Alignment(0.95, -0.4),
+                        colors: [
+                          Color(0xffED81FF),
+                          Color(0xffDB00FF),
+                          Colors.transparent
+                        ],
+                      )),
+                  child: Container(
+                    decoration: BoxDecoration(
+                        gradient: RadialGradient(
+                          radius: 0.065,
+                          center: Alignment(-0.95, -0),
+                          colors: [
+                            Color(0xffED81FF),
+                            Color(0xffDB00FF),
+                            Colors.transparent
+                          ],
+                        )),
+>>>>>>> cc4c9a6644a3f52941a98027a9edde9c3d057ef1
                     child: Column(
                       children: [
                         SizedBox(
@@ -117,13 +174,22 @@ class _PublicPolicyState extends State<PublicPolicy> {
                             child: Icon(Figmauploadicon.privacypolicy2,
                               color: Color(0xffea81ff),
                               size: 175.sp,
+<<<<<<< HEAD
                         ),
+=======
+                            ),
+>>>>>>> cc4c9a6644a3f52941a98027a9edde9c3d057ef1
                           ),
                           Padding(
                             padding: const EdgeInsets.fromLTRB(80, 105, 0, 0),
                             child: Icon(Figmauploadicon.privacypolicy3,
+<<<<<<< HEAD
                             size: 75.sp,
                             color: Color(0xffee9dfa).withOpacity(0.9),),
+=======
+                              size: 75.sp,
+                              color: Color(0xffee9dfa).withOpacity(0.9),),
+>>>>>>> cc4c9a6644a3f52941a98027a9edde9c3d057ef1
                           )
                         ]),
                         SizedBox(
@@ -184,7 +250,11 @@ class _PublicPolicyState extends State<PublicPolicy> {
                           height: 1.h,
                         ),
                         Padding(
+<<<<<<< HEAD
                           padding: const EdgeInsets.fromLTRB(100, 10, 100, 0),
+=======
+                          padding: const EdgeInsets.fromLTRB(90, 10, 90, 0),
+>>>>>>> cc4c9a6644a3f52941a98027a9edde9c3d057ef1
                           child: Text(
                             'In the last three years, how many years of skilled work experience do you have in Canada?',
                             style: TextStyle(
