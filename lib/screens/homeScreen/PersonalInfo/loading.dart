@@ -1,12 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:outline_gradient_button/outline_gradient_button.dart';
-<<<<<<< HEAD
 import 'package:precisely/assets/figmaUploadIcon_icons.dart';
-
-=======
-import 'package:precisely/assets/figmauploadicon_icons.dart';
->>>>>>> cc4c9a6644a3f52941a98027a9edde9c3d057ef1
 
 class LoadingPersonal extends StatefulWidget {
   @override
@@ -16,13 +11,8 @@ class LoadingPersonal extends StatefulWidget {
 class _LoadingPersonalState extends State<LoadingPersonal> {
   @override
   Widget build(BuildContext context) {
-<<<<<<< HEAD
     return Scaffold(
       backgroundColor: Color(0xff1E1E1E),
-=======
-    var size = MediaQuery.of(context).size;
-    return Scaffold(
->>>>>>> cc4c9a6644a3f52941a98027a9edde9c3d057ef1
       appBar: AppBar(
         title: Text('Personal Info'),
         backgroundColor: Color(0xff1E1E1E),
@@ -39,17 +29,21 @@ class _LoadingPersonalState extends State<LoadingPersonal> {
               },
               icon: Icon(Icons.chat)),
         ],
-<<<<<<< HEAD
-        leading: IconButton(icon: Icon(
-          Figmauploadicon.backButton,
-          size: 15,
-        ),  onPressed: () {}),
+        leading: IconButton(
+            icon: Icon(
+              Figmauploadicon.backButton,
+              size: 15,
+            ),
+            onPressed: () {}),
       ), // AppBar
       body: Center(
         child: Container(
           child: Stack(
             children: [
-              Image(image: AssetImage("assets/Info.png"), alignment: AlignmentDirectional.center,),
+              Image(
+                image: AssetImage("assets/Info.png"),
+                alignment: AlignmentDirectional.center,
+              ),
               Positioned(
                   top: 40,
                   bottom: 40,
@@ -63,12 +57,23 @@ class _LoadingPersonalState extends State<LoadingPersonal> {
                       children: [
                         Text(
                           "83%",
-                          style: TextStyle(fontSize: 35, fontWeight: FontWeight.bold, color: Colors.red, fontFamily: 'agne'),
+                          style: TextStyle(
+                              fontSize: 35,
+                              fontWeight: FontWeight.bold,
+                              color: Colors.red,
+                              fontFamily: 'agne'),
                         ),
-                        SizedBox(height: 8,),
+                        SizedBox(
+                          height: 8,
+                        ),
                         Text(
                           "percent of Americans agree\nthat our nation is better off\nwhen more of our students are\ninternationally educated and\nunderstand other cultures and\nlanguages.",
-                          style: TextStyle(fontSize: 14, fontWeight: FontWeight.bold, color: Colors.green, fontFamily: 'futur',),
+                          style: TextStyle(
+                            fontSize: 14,
+                            fontWeight: FontWeight.bold,
+                            color: Colors.green,
+                            fontFamily: 'futur',
+                          ),
                           textAlign: TextAlign.right,
                         ),
                       ],
@@ -80,7 +85,10 @@ class _LoadingPersonalState extends State<LoadingPersonal> {
                   strokeWidth: 2,
                   padding: EdgeInsets.symmetric(horizontal: 24, vertical: 12),
                   radius: Radius.circular(8),
-                  child: Text('Next', style: TextStyle(color: Color(0xffFFFFFF), fontSize: 15),),
+                  child: Text(
+                    'Next',
+                    style: TextStyle(color: Color(0xffFFFFFF), fontSize: 15),
+                  ),
                   backgroundColor: Colors.black45,
                   elevation: 4,
                   inkWell: true,
@@ -97,110 +105,8 @@ class _LoadingPersonalState extends State<LoadingPersonal> {
               ),
             ],
           ),
-          ),
-        ),
-    );
-  }
-}
-=======
-        leading: IconButton(
-            icon: Icon(
-              Figmauploadicon.backButton,
-              size: 15,
-            ),
-            onPressed: () {}),
-      ), // AppBar,
-      backgroundColor: Colors.transparent,
-      body: Center(
-        child: Container(
-          width: size.width * 0.85,
-          height: size.height * 0.85,
-          decoration: BoxDecoration(
-            gradient: LinearGradient(
-              begin: Alignment.topLeft,
-              end: Alignment.bottomRight,
-              colors: [
-                Color(0xff32383E),
-                Color(0xff17191C),
-              ],
-            ),
-            borderRadius: BorderRadius.circular(20),
-          ),
-          child: Padding(
-            padding: const EdgeInsets.symmetric(horizontal: 9, vertical: 12),
-            child: Container(
-              decoration: BoxDecoration(
-                image: DecorationImage(
-                  image: AssetImage('assets/Info.png'),
-                  fit: BoxFit.cover,
-                ),
-                borderRadius: BorderRadius.circular(20),
-              ),
-              child: Padding(
-                padding: const EdgeInsets.all(23.0),
-                child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.end,
-                  children: [
-                    Text(
-                      "83%",
-                      style: TextStyle(
-                        fontSize: 50,
-                        fontWeight: FontWeight.bold,
-                        color: Color(0xffC1403F),
-                      ),
-                    ),
-                    Text(
-                      "percent of Americans agree\nthat our nation is better off\nwhen more of our students are\ninternationally educated and\nunderstand other cultures and\nlanguages.",
-                      style: TextStyle(
-                        fontSize: 14,
-                        fontWeight: FontWeight.bold,
-                        color: Color(0xff144A52),
-                      ),
-                      textAlign: TextAlign.right,
-                    ),
-                  ],
-                ),
-              ),
-            ),
-          ),
-        ),
-      ),
-      floatingActionButton: Container(
-        margin:
-        EdgeInsets.only(right: size.width / 10, bottom: size.height / 25),
-        decoration: BoxDecoration(
-          gradient: LinearGradient(
-            begin: Alignment.topCenter,
-            end: Alignment.bottomCenter,
-            colors: [
-              Color(0xff32383E),
-              Color(0xff17191C),
-            ],
-          ),
-          borderRadius: BorderRadius.circular(8),
-        ),
-        child: OutlineGradientButton(
-          strokeWidth: 2,
-          padding: EdgeInsets.symmetric(horizontal: 24, vertical: 12),
-          radius: Radius.circular(7),
-          child: Text(
-            'Next',
-            style: TextStyle(color: Color(0xffFFFFFF), fontSize: 15),
-          ),
-          backgroundColor: Colors.black45,
-          gradient: LinearGradient(
-            colors: [
-              Color(0xffFFE2CD),
-              Color(0xffFEC2E7),
-              Color(0xffC9E7FF),
-              Color(0xff86FEF4)
-            ],
-          ),
         ),
       ),
     );
   }
 }
-
-
->>>>>>> cc4c9a6644a3f52941a98027a9edde9c3d057ef1

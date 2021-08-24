@@ -5,9 +5,6 @@ import 'package:easy_gradient_text/easy_gradient_text.dart';
 import 'package:outline_gradient_button/outline_gradient_button.dart';
 import 'package:precisely/screens/goalsScreen/engineering.dart';
 
-
-
-
 class NameEmail extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
@@ -49,7 +46,7 @@ class NameEmail extends StatelessWidget {
                       fontWeight: FontWeight.w400),
                   decoration: InputDecoration(
                       contentPadding:
-                      EdgeInsets.symmetric(vertical: 5, horizontal: 15),
+                          EdgeInsets.symmetric(vertical: 5, horizontal: 15),
                       fillColor: Colors.black,
                       filled: true,
                       hintText: "Enter Name",
@@ -79,7 +76,7 @@ class NameEmail extends StatelessWidget {
                         fontWeight: FontWeight.w400),
                     decoration: InputDecoration(
                         contentPadding:
-                        EdgeInsets.symmetric(vertical: 5, horizontal: 15),
+                            EdgeInsets.symmetric(vertical: 5, horizontal: 15),
                         fillColor: Colors.black,
                         filled: true,
                         hintText: "Enter Email",
@@ -109,11 +106,10 @@ class NameEmail extends StatelessWidget {
                         fontSize: 15,
                         fontWeight: FontWeight.w400)),
                 onTap: () {
-                  Navigator.push(
-                    context,
-                    MaterialPageRoute(builder: (context) => Engineering() )
-                        //AppBarBottom(value: 0,)),
-                  );
+                  Navigator.push(context,
+                      MaterialPageRoute(builder: (context) => Engineering())
+                      //AppBarBottom(value: 0,)),
+                      );
                 },
                 gradient: LinearGradient(colors: [
                   Color(0xffFFE2CD),

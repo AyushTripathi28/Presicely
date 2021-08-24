@@ -16,10 +16,6 @@ class _MedicineState extends State<Medicine> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-<<<<<<< HEAD
-=======
-      //extendBodyBehindAppBar: true,
->>>>>>> cc4c9a6644a3f52941a98027a9edde9c3d057ef1
       appBar: AppBar(
         leading: IconButton(
           onPressed: () {
@@ -39,7 +35,6 @@ class _MedicineState extends State<Medicine> {
           width: MediaQuery.of(context).size.width,
           foregroundDecoration: BoxDecoration(
               gradient: RadialGradient(
-<<<<<<< HEAD
             center: Alignment(0, -0.5),
             radius: 0.5,
             colors: [
@@ -75,90 +70,34 @@ class _MedicineState extends State<Medicine> {
                     gradient: RadialGradient(
                   radius: 0.03,
                   center: Alignment(0.5, -0.3),
-=======
-                center: Alignment(0, -0.5),
-                radius: 0.5,
-                colors: [
-                  //Color(0xffFFDB03).withOpacity(0.3),
-                  Color(0xffF87A1D).withOpacity(0.7),
-                  Colors.transparent
-                ],
-              )),
-          child: Container(
-            decoration: BoxDecoration(
-                gradient: RadialGradient(
-                  radius: 0.05,
-                  center: Alignment(0.3, -0.85),
->>>>>>> cc4c9a6644a3f52941a98027a9edde9c3d057ef1
                   colors: [
                     Color(0xffFFDB03),
                     Color(0xffF87A1D),
                     Colors.transparent
                   ],
                 )),
-<<<<<<< HEAD
                 child: Container(
                   decoration: BoxDecoration(
                       gradient: RadialGradient(
                     radius: 0.06,
                     center: Alignment(0.95, -0.4),
-=======
-            child: Container(
-              decoration: BoxDecoration(
-                  gradient: RadialGradient(
-                    radius: 0.08,
-                    center: Alignment(-0.75, -0.6),
->>>>>>> cc4c9a6644a3f52941a98027a9edde9c3d057ef1
                     colors: [
                       Color(0xffFFDB03),
                       Color(0xffF87A1D),
                       Colors.transparent
                     ],
                   )),
-<<<<<<< HEAD
                   child: Container(
                     decoration: BoxDecoration(
                         gradient: RadialGradient(
                       radius: 0.065,
                       center: Alignment(-0.95, -0),
-=======
-              child: Container(
-                decoration: BoxDecoration(
-                    gradient: RadialGradient(
-                      radius: 0.03,
-                      center: Alignment(0.5, -0.3),
->>>>>>> cc4c9a6644a3f52941a98027a9edde9c3d057ef1
                       colors: [
                         Color(0xffFFDB03),
                         Color(0xffF87A1D),
                         Colors.transparent
                       ],
                     )),
-<<<<<<< HEAD
-=======
-                child: Container(
-                  decoration: BoxDecoration(
-                      gradient: RadialGradient(
-                        radius: 0.06,
-                        center: Alignment(0.95, -0.4),
-                        colors: [
-                          Color(0xffFFDB03),
-                          Color(0xffF87A1D),
-                          Colors.transparent
-                        ],
-                      )),
-                  child: Container(
-                    decoration: BoxDecoration(
-                        gradient: RadialGradient(
-                          radius: 0.065,
-                          center: Alignment(-0.95, -0),
-                          colors: [
-                            Color(0xffFFDB03),
-                            Color(0xffF87A1D),
-                            Colors.transparent
-                          ],
-                        )),
->>>>>>> cc4c9a6644a3f52941a98027a9edde9c3d057ef1
                     child: Column(
                       children: [
                         SizedBox(
@@ -166,19 +105,11 @@ class _MedicineState extends State<Medicine> {
                         ),
                         Image.asset(
                           'assets/Medicine.png',
-<<<<<<< HEAD
-                          scale: 0.8.sp,
-                        ),
-                        SizedBox(
-                          height: 10.h,
-                        ),
-=======
                           scale: 0.9.sp,
                         ),
                         // SizedBox(
                         //   height: 10.h,
                         // ),
->>>>>>> cc4c9a6644a3f52941a98027a9edde9c3d057ef1
                         Text(
                           'Medicine',
                           style: TextStyle(
@@ -220,11 +151,7 @@ class _MedicineState extends State<Medicine> {
                           ],
                         ),
                         SizedBox(
-<<<<<<< HEAD
-                          height: 5.h,
-=======
                           height: 3.h,
->>>>>>> cc4c9a6644a3f52941a98027a9edde9c3d057ef1
                         ),
                         Text(
                           'NOTE',
@@ -234,19 +161,11 @@ class _MedicineState extends State<Medicine> {
                               fontFamily: 'Circular Std',
                               fontWeight: FontWeight.normal),
                         ),
-<<<<<<< HEAD
-                        // SizedBox(
-                        //   height: 1.h,
-                        // ),
-                        Padding(
-                          padding: const EdgeInsets.fromLTRB(100, 10, 100, 0),
-=======
                         SizedBox(
                           height: 1.h,
                         ),
                         Padding(
                           padding: const EdgeInsets.fromLTRB(90, 10, 90, 0),
->>>>>>> cc4c9a6644a3f52941a98027a9edde9c3d057ef1
                           child: Text(
                             'In the last three years, how many years of skilled work experience do you have in Canada?',
                             style: TextStyle(

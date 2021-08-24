@@ -51,6 +51,14 @@
       },
       "oauth_client": [
         {
+          "client_id": "1012781912188-tsdpde7teobgluklgbn26p47igg636a4.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.mobileauth.otp_auth",
+            "certificate_hash": "6a419660ba2cff13e2655267fcc68a2196c7f507"
+          }
+        },
+        {
           "client_id": "1012781912188-79c6llq1voh646vuk9su86td9sm1c6e6.apps.googleusercontent.com",
           "client_type": 3
         }

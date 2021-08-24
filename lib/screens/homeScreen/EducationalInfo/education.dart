@@ -54,7 +54,7 @@ class _EducationPageState extends State<EducationPage> {
             pageController.page == 0
                 ? Navigator.of(context).pop()
                 : pageController.previousPage(
-                duration: Duration(milliseconds: 400), curve: Curves.ease);
+                    duration: Duration(milliseconds: 400), curve: Curves.ease);
           },
           icon: Icon(Icons.arrow_back),
         ),

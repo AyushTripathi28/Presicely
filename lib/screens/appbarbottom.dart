@@ -15,16 +15,11 @@ class AppBarBottom extends StatefulWidget {
 
 class _AppBarBottomState extends State<AppBarBottom> {
   int _selectedIndex = 0;
-  List<Widget> _widgetOptions = <Widget>[
-    HomeScreen(),
-    DashCard(),
-    Profile()
-  ];
+  List<Widget> _widgetOptions = <Widget>[HomeScreen(), DashCard(), Profile()];
 
   void _onItemTap(int index) {
     setState(() {
       _selectedIndex = index;
-
     });
   }
 
@@ -87,7 +82,6 @@ class _AppBarBottomState extends State<AppBarBottom> {
           ],
         ),
       ),
-
       body: Container(child: _widgetOptions.elementAt(_selectedIndex)),
       bottomNavigationBar: _customBottomNavBar(),
     );
@@ -103,13 +97,13 @@ class _AppBarBottomState extends State<AppBarBottom> {
           height: 80,
           decoration: BoxDecoration(
               gradient: LinearGradient(
-                colors: [
-                  Color(0xff32383E),
-                  Color(0xff17191C),
-                ],
-                begin: Alignment.topCenter,
-                end: Alignment.bottomCenter,
-              )),
+            colors: [
+              Color(0xff32383E),
+              Color(0xff17191C),
+            ],
+            begin: Alignment.topCenter,
+            end: Alignment.bottomCenter,
+          )),
           child: new BottomNavigationBar(
               currentIndex: _selectedIndex,
               onTap: _onItemTap,
@@ -121,19 +115,27 @@ class _AppBarBottomState extends State<AppBarBottom> {
               items: <BottomNavigationBarItem>[
                 new BottomNavigationBarItem(
                   icon: new Image.asset(
-                    'assets/Home.png', height: 20, width: 30,
+                    'assets/Home.png',
+                    height: 20,
+                    width: 30,
                   ),
                   activeIcon: new Image.asset('assets/home_gradient.png'),
                   label: '',
                 ),
                 new BottomNavigationBarItem(
-                    icon: new Image.asset('assets/main.png',height: 20, width: 30,
+                    icon: new Image.asset(
+                      'assets/main.png',
+                      height: 20,
+                      width: 30,
                     ),
                     activeIcon:
-                    new Image.asset('assets/dashboard_gradient.png'),
+                        new Image.asset('assets/dashboard_gradient.png'),
                     label: ''),
                 new BottomNavigationBarItem(
-                    icon: new Image.asset('assets/Iconcolor.png',height: 20, width: 30,
+                    icon: new Image.asset(
+                      'assets/Iconcolor.png',
+                      height: 20,
+                      width: 30,
                     ),
                     activeIcon: new Image.asset('assets/user_gradient.png'),
                     label: ''),
@@ -143,5 +145,3 @@ class _AppBarBottomState extends State<AppBarBottom> {
     );
   }
 }
-
-

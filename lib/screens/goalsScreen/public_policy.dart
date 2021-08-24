@@ -35,7 +35,6 @@ class _PublicPolicyState extends State<PublicPolicy> {
           width: MediaQuery.of(context).size.width,
           foregroundDecoration: BoxDecoration(
               gradient: RadialGradient(
-<<<<<<< HEAD
             center: Alignment(0, -0.5),
             radius: 0.5,
             colors: [
@@ -71,70 +70,37 @@ class _PublicPolicyState extends State<PublicPolicy> {
                     gradient: RadialGradient(
                   radius: 0.03,
                   center: Alignment(0.5, -0.3),
-=======
-                center: Alignment(0, -0.5),
-                radius: 0.5,
-                colors: [
-                  //Color(0xffED81FF).withOpacity(0.3),
-                  Color(0xffDB00FF).withOpacity(0.7),
-                  Colors.transparent
-                ],
-              )),
-          child: Container(
-            decoration: BoxDecoration(
-                gradient: RadialGradient(
-                  radius: 0.05,
-                  center: Alignment(0.3, -0.85),
->>>>>>> cc4c9a6644a3f52941a98027a9edde9c3d057ef1
                   colors: [
                     Color(0xffED81FF),
                     Color(0xffDB00FF),
                     Colors.transparent
                   ],
                 )),
-<<<<<<< HEAD
                 child: Container(
                   decoration: BoxDecoration(
                       gradient: RadialGradient(
-                    radius: 0.06,
-                    center: Alignment(0.95, -0.4),
-=======
-            child: Container(
-              decoration: BoxDecoration(
-                  gradient: RadialGradient(
                     radius: 0.08,
                     center: Alignment(-0.75, -0.6),
->>>>>>> cc4c9a6644a3f52941a98027a9edde9c3d057ef1
                     colors: [
                       Color(0xffED81FF),
                       Color(0xffDB00FF),
                       Colors.transparent
                     ],
                   )),
-<<<<<<< HEAD
                   child: Container(
                     decoration: BoxDecoration(
                         gradient: RadialGradient(
-                      radius: 0.065,
-                      center: Alignment(-0.95, -0),
-=======
-              child: Container(
-                decoration: BoxDecoration(
-                    gradient: RadialGradient(
                       radius: 0.03,
                       center: Alignment(0.5, -0.3),
->>>>>>> cc4c9a6644a3f52941a98027a9edde9c3d057ef1
                       colors: [
                         Color(0xffED81FF),
                         Color(0xffDB00FF),
                         Colors.transparent
                       ],
                     )),
-<<<<<<< HEAD
-=======
-                child: Container(
-                  decoration: BoxDecoration(
-                      gradient: RadialGradient(
+                    child: Container(
+                      decoration: BoxDecoration(
+                          gradient: RadialGradient(
                         radius: 0.06,
                         center: Alignment(0.95, -0.4),
                         colors: [
@@ -143,9 +109,9 @@ class _PublicPolicyState extends State<PublicPolicy> {
                           Colors.transparent
                         ],
                       )),
-                  child: Container(
-                    decoration: BoxDecoration(
-                        gradient: RadialGradient(
+                      child: Container(
+                        decoration: BoxDecoration(
+                            gradient: RadialGradient(
                           radius: 0.065,
                           center: Alignment(-0.95, -0),
                           colors: [
@@ -154,130 +120,128 @@ class _PublicPolicyState extends State<PublicPolicy> {
                             Colors.transparent
                           ],
                         )),
->>>>>>> cc4c9a6644a3f52941a98027a9edde9c3d057ef1
-                    child: Column(
-                      children: [
-                        SizedBox(
-                          height: 2.h,
-                        ),
-                        Stack(children: [
-                          Padding(
-                            padding: const EdgeInsets.fromLTRB(80, 0, 0, 0),
-                            child: Icon(
-                              Figmauploadicon.privacypolicy1,
-                              color: Color(0xffa33cd7),
-                              size: 175.sp,
-                            ),
-                          ),
-                          Padding(
-                            padding: const EdgeInsets.fromLTRB(40, 20, 120, 0),
-                            child: Icon(Figmauploadicon.privacypolicy2,
-                              color: Color(0xffea81ff),
-                              size: 175.sp,
-<<<<<<< HEAD
-                        ),
-=======
-                            ),
->>>>>>> cc4c9a6644a3f52941a98027a9edde9c3d057ef1
-                          ),
-                          Padding(
-                            padding: const EdgeInsets.fromLTRB(80, 105, 0, 0),
-                            child: Icon(Figmauploadicon.privacypolicy3,
-<<<<<<< HEAD
-                            size: 75.sp,
-                            color: Color(0xffee9dfa).withOpacity(0.9),),
-=======
-                              size: 75.sp,
-                              color: Color(0xffee9dfa).withOpacity(0.9),),
->>>>>>> cc4c9a6644a3f52941a98027a9edde9c3d057ef1
-                          )
-                        ]),
-                        SizedBox(
-                          height: 10.h,
-                        ),
-                        Text(
-                          'Public \n Policy',
-                          style: TextStyle(
-                              fontSize: 30.sp,
-                              color: Color(0xff831b95),
-                              fontFamily: 'Monument Extended'),
-                        ),
-                        SizedBox(
-                          height: 3.h,
-                        ),
-                        Row(
+                        child: Column(
                           children: [
                             SizedBox(
-                              width: 10.w,
+                              height: 2.h,
                             ),
-                            new IconButton(
-                              //alignment: Alignment(5, 0),
-                              icon: Image.asset('assets/publicpolicy-backward.png'),
-                              iconSize: 30,
-                              onPressed: () {
-                                Navigator.of(context).push(MaterialPageRoute(
-                                    builder: (context) => Medicine()));
-                                print('Backward');
-                              },
+                            Stack(children: [
+                              Padding(
+                                padding: const EdgeInsets.fromLTRB(80, 0, 0, 0),
+                                child: Icon(
+                                  Figmauploadicon.privacypolicy1,
+                                  color: Color(0xffa33cd7),
+                                  size: 175.sp,
+                                ),
+                              ),
+                              Padding(
+                                padding:
+                                    const EdgeInsets.fromLTRB(40, 20, 120, 0),
+                                child: Icon(
+                                  Figmauploadicon.privacypolicy2,
+                                  color: Color(0xffea81ff),
+                                  size: 175.sp,
+                                ),
+                              ),
+                              Padding(
+                                padding:
+                                    const EdgeInsets.fromLTRB(80, 105, 0, 0),
+                                child: Icon(
+                                  Figmauploadicon.privacypolicy3,
+                                  size: 75.sp,
+                                  color: Color(0xffee9dfa).withOpacity(0.9),
+                                ),
+                              )
+                            ]),
+                            SizedBox(
+                              height: 10.h,
+                            ),
+                            Text(
+                              'Public \n Policy',
+                              style: TextStyle(
+                                  fontSize: 30.sp,
+                                  color: Color(0xff831b95),
+                                  fontFamily: 'Monument Extended'),
                             ),
                             SizedBox(
-                              width: 55.w,
+                              height: 3.h,
                             ),
-                            new IconButton(
-                              //alignment: Alignment(32, 0),
-                              icon: Image.asset('assets/publicpolicy-forward.png'),
-                              iconSize: 30,
-                              onPressed: () {
-                                Navigator.of(context).push(MaterialPageRoute(
-                                    builder: (context) => Management()));
-                                print('Forward');
-                              },
+                            Row(
+                              children: [
+                                SizedBox(
+                                  width: 10.w,
+                                ),
+                                new IconButton(
+                                  //alignment: Alignment(5, 0),
+                                  icon: Image.asset(
+                                      'assets/publicpolicy-backward.png'),
+                                  iconSize: 30,
+                                  onPressed: () {
+                                    Navigator.of(context).push(
+                                        MaterialPageRoute(
+                                            builder: (context) => Medicine()));
+                                    print('Backward');
+                                  },
+                                ),
+                                SizedBox(
+                                  width: 55.w,
+                                ),
+                                new IconButton(
+                                  //alignment: Alignment(32, 0),
+                                  icon: Image.asset(
+                                      'assets/publicpolicy-forward.png'),
+                                  iconSize: 30,
+                                  onPressed: () {
+                                    Navigator.of(context).push(
+                                        MaterialPageRoute(
+                                            builder: (context) =>
+                                                Management()));
+                                    print('Forward');
+                                  },
+                                ),
+                              ],
                             ),
+                            SizedBox(
+                              height: 5.h,
+                            ),
+                            Text(
+                              'NOTE',
+                              style: TextStyle(
+                                  fontSize: 15.sp,
+                                  color: Color(0xff969696),
+                                  fontFamily: 'Circular Std',
+                                  fontWeight: FontWeight.normal),
+                            ),
+                            SizedBox(
+                              height: 1.h,
+                            ),
+                            Padding(
+                              padding: const EdgeInsets.fromLTRB(90, 10, 90, 0),
+                              child: Text(
+                                'In the last three years, how many years of skilled work experience do you have in Canada?',
+                                style: TextStyle(
+                                  fontSize: 10.sp,
+                                  color: Color(0xff969696),
+                                  fontFamily: 'Circular Std',
+                                  fontWeight: FontWeight.normal,
+                                ),
+                                textAlign: TextAlign.center,
+                              ),
+                            )
                           ],
                         ),
-                        SizedBox(
-                          height: 5.h,
-                        ),
-                        Text(
-                          'NOTE',
-                          style: TextStyle(
-                              fontSize: 15.sp,
-                              color: Color(0xff969696),
-                              fontFamily: 'Circular Std',
-                              fontWeight: FontWeight.normal),
-                        ),
-                        SizedBox(
-                          height: 1.h,
-                        ),
-                        Padding(
-<<<<<<< HEAD
-                          padding: const EdgeInsets.fromLTRB(100, 10, 100, 0),
-=======
-                          padding: const EdgeInsets.fromLTRB(90, 10, 90, 0),
->>>>>>> cc4c9a6644a3f52941a98027a9edde9c3d057ef1
-                          child: Text(
-                            'In the last three years, how many years of skilled work experience do you have in Canada?',
-                            style: TextStyle(
-                              fontSize: 10.sp,
-                              color: Color(0xff969696),
-                              fontFamily: 'Circular Std',
-                              fontWeight: FontWeight.normal,
-                            ),
-                            textAlign: TextAlign.center,
-                          ),
-                        )
-                      ],
+                        // alignment: Alignment(0, -0.65),
+                        // foregroundDecoration: BoxDecoration(
+                        //     gradient: RadialGradient(
+                        //         radius: 0.15,
+                        //         center: Alignment(0.2, -0.55),
+                        //         colors: [
+                        //           Color(0xff9BE15D).withOpacity(0.8),
+                        //           Color(0xff00E3AE).withOpacity(0.8),
+                        //           Colors.transparent
+                        //         ])),
+                      ),
                     ),
-                    // alignment: Alignment(0, -0.65),
-                    // foregroundDecoration: BoxDecoration(
-                    //     gradient: RadialGradient(
-                    //         radius: 0.15,
-                    //         center: Alignment(0.2, -0.55),
-                    //         colors: [
-                    //           Color(0xff9BE15D).withOpacity(0.8),
-                    //           Color(0xff00E3AE).withOpacity(0.8),
-                    //           Colors.transparent
-                    //         ])),
                   ),
                 ),
               ),

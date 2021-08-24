@@ -1,15 +1,8 @@
 import 'package:flutter/material.dart';
-<<<<<<< HEAD
-import 'package:precisely/assets/figmaUploadIcon_icons.dart';
-=======
 import 'package:precisely/assets/figmauploadicon_icons.dart';
 import 'package:precisely/screens/appbarbottom.dart';
->>>>>>> cc4c9a6644a3f52941a98027a9edde9c3d057ef1
 import 'package:precisely/screens/goalsScreen/public_policy.dart';
 import 'package:sizer/sizer.dart';
-
-import 'engineering.dart';
-
 
 class Management extends StatefulWidget {
   const Management({Key? key}) : super(key: key);
@@ -41,69 +34,69 @@ class _ManagementState extends State<Management> {
           width: MediaQuery.of(context).size.width,
           foregroundDecoration: BoxDecoration(
               gradient: RadialGradient(
-                center: Alignment(0, -0.5),
-                radius: 0.5,
-                colors: [
-                  Color(0xff00E0FF).withOpacity(0.3),
-                  //Color(0xff004483).withOpacity(0.7),
-                  Colors.transparent
-                ],
-              )),
+            center: Alignment(0, -0.5),
+            radius: 0.5,
+            colors: [
+              Color(0xff00E0FF).withOpacity(0.3),
+              //Color(0xff004483).withOpacity(0.7),
+              Colors.transparent
+            ],
+          )),
           child: Container(
             decoration: BoxDecoration(
                 gradient: RadialGradient(
-                  radius: 0.05,
-                  center: Alignment(0.3, -0.85),
+              radius: 0.05,
+              center: Alignment(0.3, -0.85),
+              colors: [
+                Color(0xff00E0FF),
+                Color(0xff004483),
+                Colors.transparent
+              ],
+            )),
+            child: Container(
+              decoration: BoxDecoration(
+                  gradient: RadialGradient(
+                radius: 0.08,
+                center: Alignment(-0.75, -0.6),
+                colors: [
+                  Color(0xff00E0FF),
+                  Color(0xff004483),
+                  Colors.transparent
+                ],
+              )),
+              child: Container(
+                decoration: BoxDecoration(
+                    gradient: RadialGradient(
+                  radius: 0.03,
+                  center: Alignment(0.5, -0.3),
                   colors: [
                     Color(0xff00E0FF),
                     Color(0xff004483),
                     Colors.transparent
                   ],
                 )),
-            child: Container(
-              decoration: BoxDecoration(
-                  gradient: RadialGradient(
-                    radius: 0.08,
-                    center: Alignment(-0.75, -0.6),
+                child: Container(
+                  decoration: BoxDecoration(
+                      gradient: RadialGradient(
+                    radius: 0.06,
+                    center: Alignment(0.95, -0.4),
                     colors: [
                       Color(0xff00E0FF),
                       Color(0xff004483),
                       Colors.transparent
                     ],
                   )),
-              child: Container(
-                decoration: BoxDecoration(
-                    gradient: RadialGradient(
-                      radius: 0.03,
-                      center: Alignment(0.5, -0.3),
+                  child: Container(
+                    decoration: BoxDecoration(
+                        gradient: RadialGradient(
+                      radius: 0.065,
+                      center: Alignment(-0.95, -0),
                       colors: [
                         Color(0xff00E0FF),
                         Color(0xff004483),
                         Colors.transparent
                       ],
                     )),
-                child: Container(
-                  decoration: BoxDecoration(
-                      gradient: RadialGradient(
-                        radius: 0.06,
-                        center: Alignment(0.95, -0.4),
-                        colors: [
-                          Color(0xff00E0FF),
-                          Color(0xff004483),
-                          Colors.transparent
-                        ],
-                      )),
-                  child: Container(
-                    decoration: BoxDecoration(
-                        gradient: RadialGradient(
-                          radius: 0.065,
-                          center: Alignment(-0.95, -0),
-                          colors: [
-                            Color(0xff00E0FF),
-                            Color(0xff004483),
-                            Colors.transparent
-                          ],
-                        )),
                     child: Column(
                       children: [
                         SizedBox(
@@ -116,45 +109,33 @@ class _ManagementState extends State<Management> {
                           ),
                           Padding(
                             padding: const EdgeInsets.fromLTRB(100, 90, 0, 0),
-                            child: Image.asset('assets/bulbbox.png', color: Colors.white,),
+                            child: Image.asset(
+                              'assets/bulbbox.png',
+                              color: Colors.white,
+                            ),
                           ),
                           Padding(
-<<<<<<< HEAD
-                            padding: const EdgeInsets.fromLTRB(8, 110, 0, 0),
-                            child: Image.asset('assets/b-1.png')
-                          ),
-                          Padding(
-                            padding: const EdgeInsets.fromLTRB(0, 75, 0, 0),
-                            child: Image.asset('assets/b-2.png')
-=======
                               padding: const EdgeInsets.fromLTRB(8, 110, 0, 0),
-                              child: Image.asset('assets/b-1.png')
-                          ),
+                              child: Image.asset('assets/b-1.png')),
                           Padding(
                               padding: const EdgeInsets.fromLTRB(0, 75, 0, 0),
-                              child: Image.asset('assets/b-2.png')
->>>>>>> cc4c9a6644a3f52941a98027a9edde9c3d057ef1
-                          ),
+                              child: Image.asset('assets/b-2.png')),
                           Padding(
                               padding: const EdgeInsets.fromLTRB(6, 30, 0, 0),
-                              child: Image.asset('assets/b-3.png')
-                          ),
+                              child: Image.asset('assets/b-3.png')),
                           Padding(
                               padding: const EdgeInsets.fromLTRB(35, 0, 0, 0),
-                              child: Image.asset('assets/b-4.png')
-                          ),
+                              child: Image.asset('assets/b-4.png')),
                           Padding(
                               padding: const EdgeInsets.fromLTRB(170, 10, 0, 0),
-                              child: Image.asset('assets/b-5.png')
-                          ),
+                              child: Image.asset('assets/b-5.png')),
                           Padding(
                               padding: const EdgeInsets.fromLTRB(180, 50, 0, 0),
-                              child: Image.asset('assets/b-6.png')
-                          ),
+                              child: Image.asset('assets/b-6.png')),
                           Padding(
-                              padding: const EdgeInsets.fromLTRB(170, 110, 0, 0),
-                              child: Image.asset('assets/b-7.png')
-                          ),
+                              padding:
+                                  const EdgeInsets.fromLTRB(170, 110, 0, 0),
+                              child: Image.asset('assets/b-7.png')),
                         ]),
                         SizedBox(
                           height: 4.h,
@@ -176,7 +157,8 @@ class _ManagementState extends State<Management> {
                             ),
                             new IconButton(
                               //alignment: Alignment(5, 0),
-                              icon: Image.asset('assets/management-backward.png'),
+                              icon:
+                                  Image.asset('assets/management-backward.png'),
                               iconSize: 30,
                               onPressed: () {
                                 Navigator.of(context).push(MaterialPageRoute(
@@ -189,15 +171,13 @@ class _ManagementState extends State<Management> {
                             ),
                             new IconButton(
                               //alignment: Alignment(32, 0),
-                              icon: Image.asset('assets/management-forward.png'),
+                              icon:
+                                  Image.asset('assets/management-forward.png'),
                               iconSize: 30,
                               onPressed: () {
                                 Navigator.of(context).push(MaterialPageRoute(
-<<<<<<< HEAD
-                                    builder: (context) => Engineering()));
-=======
-                                    builder: (context) => AppBarBottom(value: 0)));
->>>>>>> cc4c9a6644a3f52941a98027a9edde9c3d057ef1
+                                    builder: (context) =>
+                                        AppBarBottom(value: 0)));
                                 print('Forward');
                               },
                             ),
@@ -218,11 +198,7 @@ class _ManagementState extends State<Management> {
                           height: 1.h,
                         ),
                         Padding(
-<<<<<<< HEAD
-                          padding: const EdgeInsets.fromLTRB(100, 10, 100, 0),
-=======
                           padding: const EdgeInsets.fromLTRB(90, 10, 90, 0),
->>>>>>> cc4c9a6644a3f52941a98027a9edde9c3d057ef1
                           child: Text(
                             'In the last three years, how many years of skilled work experience do you have in Canada?',
                             style: TextStyle(
@@ -243,10 +219,10 @@ class _ManagementState extends State<Management> {
                             center: Alignment(-0.03, -0.4),
                             focalRadius: 2.5,
                             colors: [
-                              Color(0xff00E0FF).withOpacity(1),
-                              Color(0xff096C7A).withOpacity(0.5),
-                              Colors.transparent
-                            ])),
+                          Color(0xff00E0FF).withOpacity(1),
+                          Color(0xff096C7A).withOpacity(0.5),
+                          Colors.transparent
+                        ])),
                   ),
                 ),
               ),
