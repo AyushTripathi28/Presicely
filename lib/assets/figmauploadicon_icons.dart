@@ -29,8 +29,8 @@ class Figmauploadicon {
   static const IconData vector = IconData(0xe805, fontFamily: _kFontFam, fontPackage: _kFontPkg);
   static const IconData vector1 = IconData(0xe806, fontFamily: _kFontFam, fontPackage: _kFontPkg);
   static const IconData backButton = IconData(0xe807, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+  static const IconData globe = IconData(0xe808, fontFamily: _kFontFam, fontPackage: _kFontPkg);
   static const IconData privacypolicy3 = IconData(0xe809, fontFamily: _kFontFam, fontPackage: _kFontPkg);
   static const IconData privacypolicy2 = IconData(0xe80a, fontFamily: _kFontFam, fontPackage: _kFontPkg);
   static const IconData privacypolicy1 = IconData(0xe80b, fontFamily: _kFontFam, fontPackage: _kFontPkg);
-
 }
